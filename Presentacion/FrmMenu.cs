@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABM_CINE_FINAL.Presentacion;
+using ABMCine.Formularios;
 
 namespace ABM_CINE_FINAL.Presentacion
 {
@@ -29,5 +30,16 @@ namespace ABM_CINE_FINAL.Presentacion
             FrmAltaBajaPelicula f_ab_pelicula = new FrmAltaBajaPelicula();
             f_ab_pelicula.ShowDialog();
         }
-    }
+
+		private void películaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            FrmAltaPelicula f_a_pelicula = new FrmAltaPelicula();
+            f_a_pelicula.ShowDialog();
+		}
+
+		private void FrmMenu_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

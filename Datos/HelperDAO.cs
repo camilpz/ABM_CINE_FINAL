@@ -148,11 +148,11 @@ namespace ABM_CINE_FINAL.Datos
             cnn.Close();
             return exito;
         }
-        public DataTable ObtenerTablasAux(string NomTabla)
+        public DataTable ObtenerTablasAux(int nro)
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Consultar_Tablas_Auxiliares");
-            comando.Parameters.AddWithValue("@tabla", NomTabla);
+            comando.Parameters.AddWithValue("@tabla", nro);
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;
@@ -178,7 +178,7 @@ namespace ABM_CINE_FINAL.Datos
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Obtener_Salas_Desocupadas");
-            comando.Parameters.AddWithValue("@fecha", fecha.ToString("dd/MM/yyyy"));
+            comando.Parameters.AddWithValue("@fecha", fecha);
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;

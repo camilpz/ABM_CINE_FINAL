@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABM_CINE_FINAL.Dominio;
-using ABM_CINE_FINAL.Datos;
+using ABM_CINE_FINAL.Servicios;
 
 namespace ABMCine.Formularios
 {
     public partial class FrmAltaPelicula : Form
     {
         Pelicula peli= new Pelicula();
-        //Servicio servicio = new Servicio();
+        Servicios servicio = new Servicios();
         
         public FrmAltaPelicula()
         {
@@ -24,14 +24,14 @@ namespace ABMCine.Formularios
 
         private void FrmAltaPelicula_Load(object sender, EventArgs e)
         {
-            CargarCombo(cboClasificacion, "Clasificaciones");
-            CargarCombo(cboGeneros, "Generos");
-            CargarCombo(cboIdiomas, "Idiomas");
+            CargarCombo(cboClasificacion, 4);
+            CargarCombo(cboGeneros, 3);
+            CargarCombo(cboIdiomas, 2);
         }
-        public void CargarCombo(ComboBox cbo, string nomTabla)
+        public void CargarCombo(ComboBox cbo, int nro_tabla)
         {
             DataTable tabla = new DataTable();
-            tabla = HelperDAO.ObtenerInstancia().ObtenerTablasAux(nomTabla);
+            tabla = servicio.ObtenerTablasAux(nro_tabla);
             cbo.DataSource = tabla;
             cbo.DisplayMember = tabla.Columns[1].ColumnName;
             cbo.ValueMember = tabla.Columns[0].ColumnName;
@@ -107,7 +107,7 @@ namespace ABMCine.Formularios
                 peli.Clasificacion = clas;
 
 
-                if (HelperDAO.ObtenerInstancia().AltaPelicula(peli))
+                if (servicio.AltaPelicula(peli))
                 {
                     MessageBox.Show("Se ha agregado la pelicula con éxito");
                     Limpiar();

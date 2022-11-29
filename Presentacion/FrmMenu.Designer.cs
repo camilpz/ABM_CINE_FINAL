@@ -28,124 +28,206 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comprobanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.películaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comprobanteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.funciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.películaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoToolStripMenuItem,
-            this.modificarToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // nuevoToolStripMenuItem
-            // 
-            this.nuevoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comprobanteToolStripMenuItem,
-            this.funcionToolStripMenuItem,
-            this.películaToolStripMenuItem});
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // comprobanteToolStripMenuItem
-            // 
-            this.comprobanteToolStripMenuItem.Name = "comprobanteToolStripMenuItem";
-            this.comprobanteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.comprobanteToolStripMenuItem.Text = "Comprobante";
-            // 
-            // funcionToolStripMenuItem
-            // 
-            this.funcionToolStripMenuItem.Name = "funcionToolStripMenuItem";
-            this.funcionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.funcionToolStripMenuItem.Text = "Funcion";
-            this.funcionToolStripMenuItem.Click += new System.EventHandler(this.funcionToolStripMenuItem_Click);
-            // 
-            // películaToolStripMenuItem
-            // 
-            this.películaToolStripMenuItem.Name = "películaToolStripMenuItem";
-            this.películaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.películaToolStripMenuItem.Text = "Película";
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estadoToolStripMenuItem});
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            // 
-            // estadoToolStripMenuItem
-            // 
-            this.estadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comprobanteToolStripMenuItem1,
-            this.funciónToolStripMenuItem,
-            this.películaToolStripMenuItem1});
-            this.estadoToolStripMenuItem.Name = "estadoToolStripMenuItem";
-            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.estadoToolStripMenuItem.Text = "Estado";
-            // 
-            // comprobanteToolStripMenuItem1
-            // 
-            this.comprobanteToolStripMenuItem1.Name = "comprobanteToolStripMenuItem1";
-            this.comprobanteToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.comprobanteToolStripMenuItem1.Text = "Comprobante";
-            // 
-            // funciónToolStripMenuItem
-            // 
-            this.funciónToolStripMenuItem.Name = "funciónToolStripMenuItem";
-            this.funciónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.funciónToolStripMenuItem.Text = "Función";
-            // 
-            // películaToolStripMenuItem1
-            // 
-            this.películaToolStripMenuItem1.Name = "películaToolStripMenuItem1";
-            this.películaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.películaToolStripMenuItem1.Text = "Película";
-            this.películaToolStripMenuItem1.Click += new System.EventHandler(this.películaToolStripMenuItem1_Click);
-            // 
-            // FrmMenu
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FrmMenu";
-            this.Text = "FrmMenu";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			this.panelMenuLateral = new System.Windows.Forms.Integration.ElementHost();
+			this.panelLogoCine = new System.Windows.Forms.Panel();
+			this.btnNuevo = new System.Windows.Forms.Button();
+			this.panelSubmenuNuevo = new System.Windows.Forms.Panel();
+			this.btnComprobante = new System.Windows.Forms.Button();
+			this.btnFuncion = new System.Windows.Forms.Button();
+			this.btnPelícula = new System.Windows.Forms.Button();
+			this.btnEditar = new System.Windows.Forms.Button();
+			this.panelSubmenuEditar = new System.Windows.Forms.Panel();
+			this.bntEditarFuncion = new System.Windows.Forms.Button();
+			this.btnReportes = new System.Windows.Forms.Button();
+			this.panelSubmenuNuevo.SuspendLayout();
+			this.panelSubmenuEditar.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// panelMenuLateral
+			// 
+			this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
+			this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Right;
+			this.panelMenuLateral.Location = new System.Drawing.Point(243, 0);
+			this.panelMenuLateral.Name = "panelMenuLateral";
+			this.panelMenuLateral.Size = new System.Drawing.Size(861, 656);
+			this.panelMenuLateral.TabIndex = 0;
+			this.panelMenuLateral.Text = "elementHost1";
+			this.panelMenuLateral.Child = null;
+			// 
+			// panelLogoCine
+			// 
+			this.panelLogoCine.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panelLogoCine.Location = new System.Drawing.Point(0, 0);
+			this.panelLogoCine.Name = "panelLogoCine";
+			this.panelLogoCine.Size = new System.Drawing.Size(243, 184);
+			this.panelLogoCine.TabIndex = 1;
+			// 
+			// btnNuevo
+			// 
+			this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnNuevo.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNuevo.FlatAppearance.BorderSize = 0;
+			this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnNuevo.Location = new System.Drawing.Point(0, 184);
+			this.btnNuevo.Name = "btnNuevo";
+			this.btnNuevo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.btnNuevo.Size = new System.Drawing.Size(243, 45);
+			this.btnNuevo.TabIndex = 2;
+			this.btnNuevo.Text = "Nuevo";
+			this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnNuevo.UseVisualStyleBackColor = false;
+			// 
+			// panelSubmenuNuevo
+			// 
+			this.panelSubmenuNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(4)))), ((int)(((byte)(79)))));
+			this.panelSubmenuNuevo.Controls.Add(this.btnPelícula);
+			this.panelSubmenuNuevo.Controls.Add(this.btnFuncion);
+			this.panelSubmenuNuevo.Controls.Add(this.btnComprobante);
+			this.panelSubmenuNuevo.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panelSubmenuNuevo.Location = new System.Drawing.Point(0, 229);
+			this.panelSubmenuNuevo.Name = "panelSubmenuNuevo";
+			this.panelSubmenuNuevo.Size = new System.Drawing.Size(243, 129);
+			this.panelSubmenuNuevo.TabIndex = 3;
+			// 
+			// btnComprobante
+			// 
+			this.btnComprobante.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnComprobante.FlatAppearance.BorderSize = 0;
+			this.btnComprobante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnComprobante.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnComprobante.Location = new System.Drawing.Point(0, 0);
+			this.btnComprobante.Name = "btnComprobante";
+			this.btnComprobante.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.btnComprobante.Size = new System.Drawing.Size(243, 40);
+			this.btnComprobante.TabIndex = 0;
+			this.btnComprobante.Text = "Comprobante";
+			this.btnComprobante.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnComprobante.UseVisualStyleBackColor = true;
+			// 
+			// btnFuncion
+			// 
+			this.btnFuncion.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnFuncion.FlatAppearance.BorderSize = 0;
+			this.btnFuncion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnFuncion.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnFuncion.Location = new System.Drawing.Point(0, 40);
+			this.btnFuncion.Name = "btnFuncion";
+			this.btnFuncion.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.btnFuncion.Size = new System.Drawing.Size(243, 40);
+			this.btnFuncion.TabIndex = 1;
+			this.btnFuncion.Text = "Función";
+			this.btnFuncion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnFuncion.UseVisualStyleBackColor = true;
+			// 
+			// btnPelícula
+			// 
+			this.btnPelícula.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnPelícula.FlatAppearance.BorderSize = 0;
+			this.btnPelícula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnPelícula.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnPelícula.Location = new System.Drawing.Point(0, 80);
+			this.btnPelícula.Name = "btnPelícula";
+			this.btnPelícula.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.btnPelícula.Size = new System.Drawing.Size(243, 40);
+			this.btnPelícula.TabIndex = 2;
+			this.btnPelícula.Text = "Película";
+			this.btnPelícula.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnPelícula.UseVisualStyleBackColor = true;
+			// 
+			// btnEditar
+			// 
+			this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnEditar.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnEditar.FlatAppearance.BorderSize = 0;
+			this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnEditar.Location = new System.Drawing.Point(0, 358);
+			this.btnEditar.Name = "btnEditar";
+			this.btnEditar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.btnEditar.Size = new System.Drawing.Size(243, 45);
+			this.btnEditar.TabIndex = 4;
+			this.btnEditar.Text = "Editar";
+			this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnEditar.UseVisualStyleBackColor = false;
+			// 
+			// panelSubmenuEditar
+			// 
+			this.panelSubmenuEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(4)))), ((int)(((byte)(79)))));
+			this.panelSubmenuEditar.Controls.Add(this.bntEditarFuncion);
+			this.panelSubmenuEditar.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panelSubmenuEditar.Location = new System.Drawing.Point(0, 403);
+			this.panelSubmenuEditar.Name = "panelSubmenuEditar";
+			this.panelSubmenuEditar.Size = new System.Drawing.Size(243, 52);
+			this.panelSubmenuEditar.TabIndex = 5;
+			// 
+			// bntEditarFuncion
+			// 
+			this.bntEditarFuncion.Dock = System.Windows.Forms.DockStyle.Top;
+			this.bntEditarFuncion.FlatAppearance.BorderSize = 0;
+			this.bntEditarFuncion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.bntEditarFuncion.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.bntEditarFuncion.Location = new System.Drawing.Point(0, 0);
+			this.bntEditarFuncion.Name = "bntEditarFuncion";
+			this.bntEditarFuncion.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+			this.bntEditarFuncion.Size = new System.Drawing.Size(243, 40);
+			this.bntEditarFuncion.TabIndex = 0;
+			this.bntEditarFuncion.Text = "Función";
+			this.bntEditarFuncion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.bntEditarFuncion.UseVisualStyleBackColor = true;
+			// 
+			// btnReportes
+			// 
+			this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnReportes.FlatAppearance.BorderSize = 0;
+			this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnReportes.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnReportes.Location = new System.Drawing.Point(0, 455);
+			this.btnReportes.Name = "btnReportes";
+			this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.btnReportes.Size = new System.Drawing.Size(243, 45);
+			this.btnReportes.TabIndex = 6;
+			this.btnReportes.Text = "Reportes";
+			this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnReportes.UseVisualStyleBackColor = false;
+			// 
+			// FrmMenu
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(1104, 656);
+			this.Controls.Add(this.btnReportes);
+			this.Controls.Add(this.panelSubmenuEditar);
+			this.Controls.Add(this.btnEditar);
+			this.Controls.Add(this.panelSubmenuNuevo);
+			this.Controls.Add(this.btnNuevo);
+			this.Controls.Add(this.panelLogoCine);
+			this.Controls.Add(this.panelMenuLateral);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Name = "FrmMenu";
+			this.Text = "FrmMenu";
+			this.Load += new System.EventHandler(this.FrmMenu_Load);
+			this.panelSubmenuNuevo.ResumeLayout(false);
+			this.panelSubmenuEditar.ResumeLayout(false);
+			this.ResumeLayout(false);
 
         }
 
-        #endregion
+		#endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comprobanteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem funcionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem películaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comprobanteToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem funciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem películaToolStripMenuItem1;
-    }
+		private System.Windows.Forms.Integration.ElementHost panelMenuLateral;
+		private System.Windows.Forms.Panel panelLogoCine;
+		private System.Windows.Forms.Button btnNuevo;
+		private System.Windows.Forms.Panel panelSubmenuNuevo;
+		private System.Windows.Forms.Button btnPelícula;
+		private System.Windows.Forms.Button btnFuncion;
+		private System.Windows.Forms.Button btnComprobante;
+		private System.Windows.Forms.Button btnEditar;
+		private System.Windows.Forms.Panel panelSubmenuEditar;
+		private System.Windows.Forms.Button bntEditarFuncion;
+		private System.Windows.Forms.Button btnReportes;
+	}
 }

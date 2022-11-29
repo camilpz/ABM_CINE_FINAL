@@ -64,8 +64,12 @@ namespace ABM_CINE_FINAL
             //}
             if(txtDni.Text.Equals("1234") && txtPassword.Text.Equals("1234"))
             {
-                FrmMenu menu = new FrmMenu();
-                menu.Show();
+                //FrmMenu menu = new FrmMenu();
+                //menu.Show();
+                //this.Hide();
+                FrmMenuOpcion2 menu2 = new FrmMenuOpcion2();
+                menu2.Show();
+                this.Hide();
             }
         }
     }

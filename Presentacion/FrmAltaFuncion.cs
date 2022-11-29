@@ -21,7 +21,8 @@ namespace ABM_CINE_FINAL.Presentacion
         }
 
         private void FrmAltaFuncion_Load(object sender, EventArgs e)
-        { 
+        {
+            Limpiar();
             CargarCombos(cboPeliculas, HelperDAO.ObtenerInstancia().ObtenerPeliculasActivas());
         }
         public void CargarCombos(ComboBox cbo, DataTable tabla)
