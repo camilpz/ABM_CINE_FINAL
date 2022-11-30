@@ -74,11 +74,9 @@ namespace ABM_CINE_FINAL.Presentacion
         {
             if(cboPeliculas.SelectedIndex != -1)
             {
-                DataRowView fila = (DataRowView)cboPeliculas.SelectedItem;
-                int id = Convert.ToInt32(fila["ID"]);
-                string nombre = fila["Pelicula"].ToString();
+                int id_peli = Convert.ToInt32(cboPeliculas.SelectedValue);
 
-                CargarCombos(cboIdiomas, HelperDAO.ObtenerInstancia().ObtenerIdiomasPeliculas(id));
+                CargarCombos(cboIdiomas, HelperDAO.ObtenerInstancia().ObtenerIdiomasPeliculas(id_peli));
             }
             
         }
@@ -101,12 +99,10 @@ namespace ABM_CINE_FINAL.Presentacion
         {
             if(cboSala.SelectedIndex != -1)
             {
-                DataRowView fila = (DataRowView)cboSala.SelectedItem;
-                int nro_sala = Convert.ToInt32(fila["ID"]);
+                int nro_sala = Convert.ToInt32(cboSala.SelectedValue);
 
                 CargarCombos(cboHorarios, HelperDAO.ObtenerInstancia().ObtenerHorariosDisponibles(nro_sala));
-            }
-            
+            }   
         }
 
         private void btnCrear_Click(object sender, EventArgs e)

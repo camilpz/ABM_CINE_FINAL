@@ -9,7 +9,7 @@ using ABM_CINE_FINAL.Dominio;
 
 namespace ABM_CINE_FINAL.Servicios
 {
-	internal class Servicios
+	internal class Servicio
 	{
 		//HelperDAO hel = new HelperDAO();
 
@@ -20,6 +20,18 @@ namespace ABM_CINE_FINAL.Servicios
 		public bool AltaPelicula(Pelicula pelicula)
 		{
 			return HelperDAO.ObtenerInstancia().AltaPelicula(pelicula);
+		}
+		public DataTable FiltrarComprobanteDni(int dni)
+		{
+			return HelperDAO.ObtenerInstancia().FiltrarComprobanteDni(dni);
+		}
+		public bool BajaComprobante(int nro_comprobante)
+		{
+			return HelperDAO.ObtenerInstancia().BajaComprobante(nro_comprobante);
+		}
+		public DataTable ObtenerFuncionesEditar()
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerFuncionesEditar();
 		}
 	}
 }

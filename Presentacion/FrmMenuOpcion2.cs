@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ABM_CINE_FINAL.Formularios;
+using ABMCine.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -81,6 +83,7 @@ namespace ABM_CINE_FINAL.Presentacion
 		{
 			//FrmAltaFuncion f_a_funcion = new FrmAltaFuncion();
 			//f_a_funcion.ShowDialog();
+			AbrirFormularios(new FrmAltaFuncion());
 			OcultarSubmenu();
 		}
 
@@ -104,7 +107,7 @@ namespace ABM_CINE_FINAL.Presentacion
 
 		private void btnPelícula_Click(object sender, EventArgs e)
 		{
-			AbrirFormularios(new FrmAltaBajaPelicula());
+			AbrirFormularios(new FrmAltaPelicula());
 		}
 
 		private void btnSalir_Click(object sender, EventArgs e)
@@ -120,6 +123,35 @@ namespace ABM_CINE_FINAL.Presentacion
 		private void btnReportes_Click(object sender, EventArgs e)
 		{
 			MostrarSubmenu(panelSubmenuReportes);
+		}
+
+		private void btnBajaFuncion_Click(object sender, EventArgs e)
+		{
+			AbrirFormularios(new FrmBajaAltaFuncion());
+		}
+
+		private void btnBajaPelicula_Click(object sender, EventArgs e)
+		{
+			AbrirFormularios(new FrmAltaBajaPelicula());
+		}
+
+		private void btnSalirFActual_Click(object sender, EventArgs e)
+		{
+			if(FormularioActivo != null)
+			{
+				FormularioActivo.Close();
+			}
+			
+		}
+
+		private void btnBajaComprobante_Click(object sender, EventArgs e)
+		{
+			AbrirFormularios(new FrmBajaComprobante());
+		}
+
+		private void bntEditarFuncion_Click(object sender, EventArgs e)
+		{
+			AbrirFormularios(new FrmEditarFuncion());
 		}
 	}
 }

@@ -59,7 +59,7 @@
 			this.lblNombre.AutoSize = true;
 			this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblNombre.Location = new System.Drawing.Point(129, 83);
+			this.lblNombre.Location = new System.Drawing.Point(100, 84);
 			this.lblNombre.Name = "lblNombre";
 			this.lblNombre.Size = new System.Drawing.Size(74, 20);
 			this.lblNombre.TabIndex = 0;
@@ -70,7 +70,7 @@
 			this.lblClasificacion.AutoSize = true;
 			this.lblClasificacion.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
 			this.lblClasificacion.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblClasificacion.Location = new System.Drawing.Point(110, 143);
+			this.lblClasificacion.Location = new System.Drawing.Point(81, 144);
 			this.lblClasificacion.Name = "lblClasificacion";
 			this.lblClasificacion.Size = new System.Drawing.Size(102, 20);
 			this.lblClasificacion.TabIndex = 1;
@@ -81,7 +81,7 @@
 			this.lblGenero.AutoSize = true;
 			this.lblGenero.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
 			this.lblGenero.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblGenero.Location = new System.Drawing.Point(137, 211);
+			this.lblGenero.Location = new System.Drawing.Point(108, 212);
 			this.lblGenero.Name = "lblGenero";
 			this.lblGenero.Size = new System.Drawing.Size(67, 20);
 			this.lblGenero.TabIndex = 2;
@@ -92,7 +92,7 @@
 			this.lblIdioma.AutoSize = true;
 			this.lblIdioma.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
 			this.lblIdioma.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblIdioma.Location = new System.Drawing.Point(137, 266);
+			this.lblIdioma.Location = new System.Drawing.Point(108, 267);
 			this.lblIdioma.Name = "lblIdioma";
 			this.lblIdioma.Size = new System.Drawing.Size(63, 20);
 			this.lblIdioma.TabIndex = 3;
@@ -103,7 +103,7 @@
 			this.lblDuracion.AutoSize = true;
 			this.lblDuracion.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
 			this.lblDuracion.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblDuracion.Location = new System.Drawing.Point(33, 321);
+			this.lblDuracion.Location = new System.Drawing.Point(4, 322);
 			this.lblDuracion.Name = "lblDuracion";
 			this.lblDuracion.Size = new System.Drawing.Size(188, 20);
 			this.lblDuracion.TabIndex = 4;
@@ -112,14 +112,14 @@
 			// txtNombre
 			// 
 			this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
-			this.txtNombre.Location = new System.Drawing.Point(233, 83);
+			this.txtNombre.Location = new System.Drawing.Point(204, 84);
 			this.txtNombre.Name = "txtNombre";
 			this.txtNombre.Size = new System.Drawing.Size(291, 22);
 			this.txtNombre.TabIndex = 0;
 			// 
 			// txtDuracion
 			// 
-			this.txtDuracion.Location = new System.Drawing.Point(233, 315);
+			this.txtDuracion.Location = new System.Drawing.Point(204, 316);
 			this.txtDuracion.Name = "txtDuracion";
 			this.txtDuracion.Size = new System.Drawing.Size(224, 22);
 			this.txtDuracion.TabIndex = 6;
@@ -128,7 +128,7 @@
 			// cboClasificacion
 			// 
 			this.cboClasificacion.FormattingEnabled = true;
-			this.cboClasificacion.Location = new System.Drawing.Point(233, 143);
+			this.cboClasificacion.Location = new System.Drawing.Point(204, 144);
 			this.cboClasificacion.Name = "cboClasificacion";
 			this.cboClasificacion.Size = new System.Drawing.Size(224, 24);
 			this.cboClasificacion.TabIndex = 1;
@@ -136,7 +136,7 @@
 			// cboGeneros
 			// 
 			this.cboGeneros.FormattingEnabled = true;
-			this.cboGeneros.Location = new System.Drawing.Point(233, 211);
+			this.cboGeneros.Location = new System.Drawing.Point(204, 212);
 			this.cboGeneros.Name = "cboGeneros";
 			this.cboGeneros.Size = new System.Drawing.Size(224, 24);
 			this.cboGeneros.TabIndex = 2;
@@ -144,29 +144,37 @@
 			// cboIdiomas
 			// 
 			this.cboIdiomas.FormattingEnabled = true;
-			this.cboIdiomas.Location = new System.Drawing.Point(233, 266);
+			this.cboIdiomas.Location = new System.Drawing.Point(204, 267);
 			this.cboIdiomas.Name = "cboIdiomas";
 			this.cboIdiomas.Size = new System.Drawing.Size(224, 24);
 			this.cboIdiomas.TabIndex = 4;
 			// 
 			// btnAceptar
 			// 
-			this.btnAceptar.Location = new System.Drawing.Point(293, 397);
+			this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnAceptar.FlatAppearance.BorderSize = 0;
+			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnAceptar.Location = new System.Drawing.Point(264, 398);
 			this.btnAceptar.Name = "btnAceptar";
-			this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+			this.btnAceptar.Size = new System.Drawing.Size(87, 29);
 			this.btnAceptar.TabIndex = 7;
 			this.btnAceptar.Text = "Aceptar";
-			this.btnAceptar.UseVisualStyleBackColor = true;
+			this.btnAceptar.UseVisualStyleBackColor = false;
 			this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
 			// 
 			// btnCancelar
 			// 
-			this.btnCancelar.Location = new System.Drawing.Point(392, 397);
+			this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnCancelar.FlatAppearance.BorderSize = 0;
+			this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnCancelar.Location = new System.Drawing.Point(363, 398);
 			this.btnCancelar.Name = "btnCancelar";
-			this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+			this.btnCancelar.Size = new System.Drawing.Size(87, 29);
 			this.btnCancelar.TabIndex = 8;
 			this.btnCancelar.Text = "Cancelar";
-			this.btnCancelar.UseVisualStyleBackColor = true;
+			this.btnCancelar.UseVisualStyleBackColor = false;
 			this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
 			// 
 			// dgvIdiomas
@@ -178,7 +186,7 @@
             this.colID,
             this.colIdioma,
             this.colAcciones});
-			this.dgvIdiomas.Location = new System.Drawing.Point(635, 68);
+			this.dgvIdiomas.Location = new System.Drawing.Point(578, 68);
 			this.dgvIdiomas.Name = "dgvIdiomas";
 			this.dgvIdiomas.ReadOnly = true;
 			this.dgvIdiomas.RowHeadersWidth = 51;
@@ -221,7 +229,7 @@
             this.colIDG,
             this.colGenero,
             this.colAccionesG});
-			this.dgvGeneros.Location = new System.Drawing.Point(635, 224);
+			this.dgvGeneros.Location = new System.Drawing.Point(578, 224);
 			this.dgvGeneros.Name = "dgvGeneros";
 			this.dgvGeneros.ReadOnly = true;
 			this.dgvGeneros.RowHeadersWidth = 51;
@@ -257,22 +265,30 @@
 			// 
 			// btnAgregarGen
 			// 
-			this.btnAgregarGen.Location = new System.Drawing.Point(477, 212);
+			this.btnAgregarGen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnAgregarGen.FlatAppearance.BorderSize = 0;
+			this.btnAgregarGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAgregarGen.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnAgregarGen.Location = new System.Drawing.Point(448, 209);
 			this.btnAgregarGen.Name = "btnAgregarGen";
-			this.btnAgregarGen.Size = new System.Drawing.Size(75, 23);
+			this.btnAgregarGen.Size = new System.Drawing.Size(87, 29);
 			this.btnAgregarGen.TabIndex = 3;
 			this.btnAgregarGen.Text = "Agregar";
-			this.btnAgregarGen.UseVisualStyleBackColor = true;
+			this.btnAgregarGen.UseVisualStyleBackColor = false;
 			this.btnAgregarGen.Click += new System.EventHandler(this.btnAgregarGen_Click);
 			// 
 			// btnAgregarIdi
 			// 
-			this.btnAgregarIdi.Location = new System.Drawing.Point(477, 267);
+			this.btnAgregarIdi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnAgregarIdi.FlatAppearance.BorderSize = 0;
+			this.btnAgregarIdi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAgregarIdi.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnAgregarIdi.Location = new System.Drawing.Point(448, 268);
 			this.btnAgregarIdi.Name = "btnAgregarIdi";
-			this.btnAgregarIdi.Size = new System.Drawing.Size(75, 23);
+			this.btnAgregarIdi.Size = new System.Drawing.Size(87, 29);
 			this.btnAgregarIdi.TabIndex = 5;
 			this.btnAgregarIdi.Text = "Agregar";
-			this.btnAgregarIdi.UseVisualStyleBackColor = true;
+			this.btnAgregarIdi.UseVisualStyleBackColor = false;
 			this.btnAgregarIdi.Click += new System.EventHandler(this.btnAgregarIdi_Click);
 			// 
 			// FrmAltaPelicula
@@ -280,7 +296,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
-			this.ClientSize = new System.Drawing.Size(986, 450);
+			this.ClientSize = new System.Drawing.Size(929, 537);
 			this.Controls.Add(this.btnAgregarIdi);
 			this.Controls.Add(this.btnAgregarGen);
 			this.Controls.Add(this.dgvGeneros);

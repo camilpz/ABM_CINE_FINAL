@@ -15,7 +15,7 @@ namespace ABMCine.Formularios
     public partial class FrmAltaPelicula : Form
     {
         Pelicula peli= new Pelicula();
-        Servicios servicio = new Servicios();
+        Servicio servicio = new Servicio();
         
         public FrmAltaPelicula()
         {

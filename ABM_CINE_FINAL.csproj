@@ -76,6 +76,12 @@
     <Compile Include="Presentacion\FrmAltaBajaPelicula.Designer.cs">
       <DependentUpon>FrmAltaBajaPelicula.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmAltaComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmAltaComprobante.Designer.cs">
+      <DependentUpon>FrmAltaComprobante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmAltaFuncion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,18 @@
     <Compile Include="Presentacion\FrmBajaAltaFuncion.Designer.cs">
       <DependentUpon>FrmBajaAltaFuncion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmBajaComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmBajaComprobante.designer.cs">
+      <DependentUpon>FrmBajaComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmEditarFuncion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmEditarFuncion.Designer.cs">
+      <DependentUpon>FrmEditarFuncion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,12 +126,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servicios\Servicios.cs" />
+    <Compile Include="Servicios\Servicio.cs" />
     <EmbeddedResource Include="Presentacion\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmAltaBajaPelicula.resx">
       <DependentUpon>FrmAltaBajaPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmAltaComprobante.resx">
+      <DependentUpon>FrmAltaComprobante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmAltaFuncion.resx">
       <DependentUpon>FrmAltaFuncion.cs</DependentUpon>
@@ -123,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmBajaAltaFuncion.resx">
       <DependentUpon>FrmBajaAltaFuncion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmBajaComprobante.resx">
+      <DependentUpon>FrmBajaComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmEditarFuncion.resx">
+      <DependentUpon>FrmEditarFuncion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>

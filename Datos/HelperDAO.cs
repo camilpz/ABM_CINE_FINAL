@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using ABM_CINE_FINAL.Dominio;
+using System.CodeDom;
 
 namespace ABM_CINE_FINAL.Datos
 {
@@ -34,7 +35,8 @@ namespace ABM_CINE_FINAL.Datos
         {
             bool resultado = false;
             Conectar("SP_Login");
-            comando.Parameters.AddWithValue("@dni", cliente.Dni);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@dni", cliente.Dni);
             comando.Parameters.AddWithValue("@password", cliente.Password);
 
             SqlParameter parametro = new SqlParameter();
@@ -60,7 +62,8 @@ namespace ABM_CINE_FINAL.Datos
                 Conectar("SP_Alta_Pelicula");
                 t = cnn.BeginTransaction();
                 comando.Transaction = t;
-                comando.Parameters.AddWithValue("@nombre", pelicula.Nombre);
+				comando.Parameters.Clear();
+				comando.Parameters.AddWithValue("@nombre", pelicula.Nombre);
                 comando.Parameters.AddWithValue("@id_clasificacion", pelicula.Clasificacion.Id);
                 comando.Parameters.AddWithValue("@duracion", pelicula.Duracion);
 
@@ -79,8 +82,8 @@ namespace ABM_CINE_FINAL.Datos
                     comando2.CommandType = CommandType.StoredProcedure;
                     comando2.CommandText = "SP_Alta_Pelicula_Genero";
                     comando2.Transaction = t;
-
-                    comando2.Parameters.AddWithValue("@id_peli", id_pelicula);
+					
+					comando2.Parameters.AddWithValue("@id_peli", id_pelicula);
                     comando2.Parameters.AddWithValue("@id_gen", genero.Id);
                     comando2.ExecuteNonQuery();
                 }
@@ -91,8 +94,8 @@ namespace ABM_CINE_FINAL.Datos
                     comando3.CommandType = CommandType.StoredProcedure;
                     comando3.CommandText = "SP_Alta_Pelicula_Idioma";
                     comando3.Transaction = t;
-
-                    comando3.Parameters.AddWithValue("@id_peli", id_pelicula);
+					
+					comando3.Parameters.AddWithValue("@id_peli", id_pelicula);
                     comando3.Parameters.AddWithValue("@id_idio", idioma.Id);
                     comando3.ExecuteNonQuery();
                 }
@@ -111,7 +114,8 @@ namespace ABM_CINE_FINAL.Datos
         {
             bool exito = false;
             Conectar("SP_Alta_Funcion");
-            comando.Parameters.AddWithValue("@id_peli_idioma", funcion.Id_peli_idio);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@id_peli_idioma", funcion.Id_peli_idio);
             comando.Parameters.AddWithValue("@nro_sala", funcion.Sala.Id);
             comando.Parameters.AddWithValue("@fecha", funcion.Fecha);
             comando.Parameters.AddWithValue("@id_horario", funcion.Horario.Id);
@@ -122,11 +126,25 @@ namespace ABM_CINE_FINAL.Datos
             cnn.Close();
             return exito;
         }
+        public bool BajaComprobante(int nro_comprobante)
+        {
+            bool exito = false;
+            Conectar("SP_Baja_Comprobante");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@nro_comprobante", nro_comprobante);
+            if (comando.ExecuteNonQuery()>0)
+            {
+                exito = true;
+            }
+            cnn.Close();
+            return exito;
+        }
         public bool CambiarEstadoFuncion(int id_funcion, int eleccion) //1- desactivar, 2 -activar
         {
             bool exito = false;
             Conectar("SP_Editar_Estado_Funcion");
-            comando.Parameters.AddWithValue("@id_funcion", id_funcion);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@id_funcion", id_funcion);
             comando.Parameters.AddWithValue("@cambio", eleccion);
             if (comando.ExecuteNonQuery() > 0)
             {
@@ -139,7 +157,8 @@ namespace ABM_CINE_FINAL.Datos
         {
             bool exito = false;
             Conectar("SP_Editar_Estado_Pelicula");
-            comando.Parameters.AddWithValue("@id_pelicula", id_pelicula);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@id_pelicula", id_pelicula);
             comando.Parameters.AddWithValue("@cambio", eleccion);
             if (comando.ExecuteNonQuery() > 0)
             {
@@ -148,10 +167,44 @@ namespace ABM_CINE_FINAL.Datos
             cnn.Close();
             return exito;
         }
+
+        public DataTable ObtenerFuncionesEditar()
+        {
+            DataTable tabla = new DataTable();
+            Conectar("SP_Vis_Funciones");
+            tabla.Load(comando.ExecuteReader());
+            cnn.Close();
+            return tabla;
+        }
+        public DataTable FiltrarComprobanteDni(int dni)
+        {
+            DataTable tabla = new DataTable();
+            Conectar("SP_Filtrar_Comprobante_Dni");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@dni", dni);
+            tabla.Load(comando.ExecuteReader());
+            cnn.Close();
+            return tabla;
+        }
+        public int ObtenerUltimoComprobante()
+        {
+            Conectar("SP_Obtener_Ultimo_Comprobante");
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@ultimo";
+            param.Direction = ParameterDirection.Output;
+            param.DbType = DbType.Int32;
+            comando.Parameters.Add(param);
+            comando.ExecuteNonQuery();
+
+			int ultimo = (int)param.Value;
+			cnn.Close();
+			return ultimo;
+		}
         public DataTable ObtenerTablasAux(int nro)
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Consultar_Tablas_Auxiliares");
+            comando.Parameters.Clear();
             comando.Parameters.AddWithValue("@tabla", nro);
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
@@ -169,7 +222,8 @@ namespace ABM_CINE_FINAL.Datos
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Obtener_Idiomas_Peliculas");
-            comando.Parameters.AddWithValue("@id_peli", id_pelicula);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@id_peli", id_pelicula);
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;
@@ -178,7 +232,8 @@ namespace ABM_CINE_FINAL.Datos
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Obtener_Salas_Desocupadas");
-            comando.Parameters.AddWithValue("@fecha", fecha);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@fecha", fecha);
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;
@@ -187,7 +242,8 @@ namespace ABM_CINE_FINAL.Datos
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Horarios_Disponibles");
-            comando.Parameters.AddWithValue("@nro_sala", nro_sala);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@nro_sala", nro_sala);
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;
@@ -196,7 +252,8 @@ namespace ABM_CINE_FINAL.Datos
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Obtener_Funciones");
-            comando.Parameters.AddWithValue("@estado", eleccion);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@estado", eleccion);
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;
@@ -205,7 +262,8 @@ namespace ABM_CINE_FINAL.Datos
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Filtrar_Pelicula_Nombre_Estado");
-            comando.Parameters.AddWithValue("@nombre", pelicula);
+			comando.Parameters.Clear();
+			comando.Parameters.AddWithValue("@nombre", pelicula);
             comando.Parameters.AddWithValue("@eleccion", estado);           //1-inactiva 2-activa 3-todas
             tabla.Load(comando.ExecuteReader());
             cnn.Close();

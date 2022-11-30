@@ -49,6 +49,7 @@ namespace ABM_CINE_FINAL.Presentacion
         }
         private void rbtAlta_CheckedChanged(object sender, EventArgs e)
         {
+            dgvFunciones.Rows.Clear();
             Elegir();
         }
 
@@ -84,6 +85,7 @@ namespace ABM_CINE_FINAL.Presentacion
 
         private void rbtBaja_CheckedChanged(object sender, EventArgs e)
         {
+            dgvFunciones.Rows.Clear();
             Elegir();
         }
     }

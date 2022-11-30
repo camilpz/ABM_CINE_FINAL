@@ -45,26 +45,33 @@
 			// 
 			// btnFiltrar
 			// 
-			this.btnFiltrar.Location = new System.Drawing.Point(520, 97);
+			this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnFiltrar.FlatAppearance.BorderSize = 0;
+			this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnFiltrar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnFiltrar.Location = new System.Drawing.Point(683, 81);
 			this.btnFiltrar.Name = "btnFiltrar";
-			this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+			this.btnFiltrar.Size = new System.Drawing.Size(79, 27);
 			this.btnFiltrar.TabIndex = 0;
 			this.btnFiltrar.Text = "Filtrar";
-			this.btnFiltrar.UseVisualStyleBackColor = true;
+			this.btnFiltrar.UseVisualStyleBackColor = false;
 			this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
 			// 
 			// lblFiltrar
 			// 
 			this.lblFiltrar.AutoSize = true;
-			this.lblFiltrar.Location = new System.Drawing.Point(52, 55);
+			this.lblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFiltrar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblFiltrar.Location = new System.Drawing.Point(162, 81);
 			this.lblFiltrar.Name = "lblFiltrar";
-			this.lblFiltrar.Size = new System.Drawing.Size(118, 16);
+			this.lblFiltrar.Size = new System.Drawing.Size(151, 20);
 			this.lblFiltrar.TabIndex = 1;
 			this.lblFiltrar.Text = "Filtrar por Nombre:";
 			// 
 			// txtNombre
 			// 
-			this.txtNombre.Location = new System.Drawing.Point(191, 52);
+			this.txtNombre.Location = new System.Drawing.Point(336, 79);
 			this.txtNombre.Name = "txtNombre";
 			this.txtNombre.Size = new System.Drawing.Size(309, 22);
 			this.txtNombre.TabIndex = 2;
@@ -72,18 +79,22 @@
 			// lblEstado
 			// 
 			this.lblEstado.AutoSize = true;
-			this.lblEstado.Location = new System.Drawing.Point(117, 100);
+			this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblEstado.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblEstado.Location = new System.Drawing.Point(247, 131);
 			this.lblEstado.Name = "lblEstado";
-			this.lblEstado.Size = new System.Drawing.Size(53, 16);
+			this.lblEstado.Size = new System.Drawing.Size(66, 20);
 			this.lblEstado.TabIndex = 3;
 			this.lblEstado.Text = "Estado:";
 			// 
 			// rbtActiva
 			// 
 			this.rbtActiva.AutoSize = true;
-			this.rbtActiva.Location = new System.Drawing.Point(191, 100);
+			this.rbtActiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtActiva.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.rbtActiva.Location = new System.Drawing.Point(336, 127);
 			this.rbtActiva.Name = "rbtActiva";
-			this.rbtActiva.Size = new System.Drawing.Size(65, 20);
+			this.rbtActiva.Size = new System.Drawing.Size(76, 24);
 			this.rbtActiva.TabIndex = 4;
 			this.rbtActiva.TabStop = true;
 			this.rbtActiva.Text = "Activa";
@@ -92,9 +103,11 @@
 			// rbtInactiva
 			// 
 			this.rbtInactiva.AutoSize = true;
-			this.rbtInactiva.Location = new System.Drawing.Point(277, 100);
+			this.rbtInactiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtInactiva.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.rbtInactiva.Location = new System.Drawing.Point(422, 127);
 			this.rbtInactiva.Name = "rbtInactiva";
-			this.rbtInactiva.Size = new System.Drawing.Size(74, 20);
+			this.rbtInactiva.Size = new System.Drawing.Size(87, 24);
 			this.rbtInactiva.TabIndex = 5;
 			this.rbtInactiva.TabStop = true;
 			this.rbtInactiva.Text = "Inactiva";
@@ -111,7 +124,7 @@
             this.colClasificacion,
             this.colDuracion,
             this.colAcciones});
-			this.dgvPeliculas.Location = new System.Drawing.Point(21, 187);
+			this.dgvPeliculas.Location = new System.Drawing.Point(166, 214);
 			this.dgvPeliculas.Name = "dgvPeliculas";
 			this.dgvPeliculas.ReadOnly = true;
 			this.dgvPeliculas.RowHeadersWidth = 51;
@@ -165,7 +178,8 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(658, 506);
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
+			this.ClientSize = new System.Drawing.Size(929, 537);
 			this.Controls.Add(this.dgvPeliculas);
 			this.Controls.Add(this.rbtInactiva);
 			this.Controls.Add(this.rbtActiva);

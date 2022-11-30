@@ -162,7 +162,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(658, 506);
+			this.ClientSize = new System.Drawing.Size(929, 537);
 			this.Controls.Add(this.cboSala);
 			this.Controls.Add(this.lblSalas);
 			this.Controls.Add(this.btnCancelar);

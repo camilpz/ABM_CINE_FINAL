@@ -57,6 +57,7 @@ namespace ABM_CINE_FINAL.Presentacion
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
+            dgvPeliculas.Rows.Clear();
             Elegir();
         }
 
