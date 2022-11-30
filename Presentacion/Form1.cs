@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ABM_CINE_FINAL.Dominio;
 using ABM_CINE_FINAL.Datos;
 using ABM_CINE_FINAL.Presentacion;
+using System.Windows.Controls;
 
 namespace ABM_CINE_FINAL
 {
@@ -72,5 +73,19 @@ namespace ABM_CINE_FINAL
                 this.Hide();
             }
         }
-    }
+
+		private void cbxMostrarPass_CheckedChanged(object sender, EventArgs e)
+		{
+            if (cbxMostrarPass.Checked)
+            {
+                cbxMostrarPass.Image = Properties.Resources.OjoCerradoIcono;
+                txtPassword.UseSystemPasswordChar = true;  
+            }
+            else
+            {
+                cbxMostrarPass.Image = Properties.Resources.OjoAbiertoIcono;
+				txtPassword.UseSystemPasswordChar = false;
+			}
+		}
+	}
 }

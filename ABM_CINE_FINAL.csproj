@@ -165,6 +165,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -179,6 +180,59 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\IconoSalida.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CineLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Cinema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EstadoIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reporte_Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReporteIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SalidaIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CambiarIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditarIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NuevoIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReportesIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SalirIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OjoAbiertoIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OjoCerradoIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lentes3DIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NuevoTicketIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProyectorIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VolverIcono.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
