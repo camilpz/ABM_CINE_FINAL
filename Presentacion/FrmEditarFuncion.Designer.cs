@@ -39,6 +39,7 @@
 			this.colPelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colIdioma = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colHorario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.btnGuardarCambios = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvFunciones)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -52,18 +53,19 @@
             this.colPelicula,
             this.colIdioma,
             this.colHorario});
-			this.dgvFunciones.Location = new System.Drawing.Point(97, 242);
+			this.dgvFunciones.Location = new System.Drawing.Point(97, 200);
 			this.dgvFunciones.Name = "dgvFunciones";
 			this.dgvFunciones.ReadOnly = true;
 			this.dgvFunciones.RowHeadersWidth = 51;
 			this.dgvFunciones.RowTemplate.Height = 24;
 			this.dgvFunciones.Size = new System.Drawing.Size(599, 281);
 			this.dgvFunciones.TabIndex = 0;
+			this.dgvFunciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFunciones_CellContentClick);
 			// 
 			// cboSala
 			// 
 			this.cboSala.FormattingEnabled = true;
-			this.cboSala.Location = new System.Drawing.Point(223, 74);
+			this.cboSala.Location = new System.Drawing.Point(217, 51);
 			this.cboSala.Name = "cboSala";
 			this.cboSala.Size = new System.Drawing.Size(300, 24);
 			this.cboSala.TabIndex = 1;
@@ -71,7 +73,7 @@
 			// cboHorario
 			// 
 			this.cboHorario.FormattingEnabled = true;
-			this.cboHorario.Location = new System.Drawing.Point(223, 124);
+			this.cboHorario.Location = new System.Drawing.Point(217, 101);
 			this.cboHorario.Name = "cboHorario";
 			this.cboHorario.Size = new System.Drawing.Size(300, 24);
 			this.cboHorario.TabIndex = 2;
@@ -79,33 +81,39 @@
 			// lblSala
 			// 
 			this.lblSala.AutoSize = true;
-			this.lblSala.Location = new System.Drawing.Point(141, 82);
+			this.lblSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblSala.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblSala.Location = new System.Drawing.Point(135, 59);
 			this.lblSala.Name = "lblSala";
-			this.lblSala.Size = new System.Drawing.Size(38, 16);
+			this.lblSala.Size = new System.Drawing.Size(47, 20);
 			this.lblSala.TabIndex = 3;
 			this.lblSala.Text = "Sala:";
 			// 
 			// lblHorario
 			// 
 			this.lblHorario.AutoSize = true;
-			this.lblHorario.Location = new System.Drawing.Point(124, 132);
+			this.lblHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblHorario.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblHorario.Location = new System.Drawing.Point(118, 109);
 			this.lblHorario.Name = "lblHorario";
-			this.lblHorario.Size = new System.Drawing.Size(55, 16);
+			this.lblHorario.Size = new System.Drawing.Size(70, 20);
 			this.lblHorario.TabIndex = 4;
 			this.lblHorario.Text = "Horario:";
 			// 
 			// lblFecha
 			// 
 			this.lblFecha.AutoSize = true;
-			this.lblFecha.Location = new System.Drawing.Point(131, 181);
+			this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFecha.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblFecha.Location = new System.Drawing.Point(125, 158);
 			this.lblFecha.Name = "lblFecha";
-			this.lblFecha.Size = new System.Drawing.Size(48, 16);
+			this.lblFecha.Size = new System.Drawing.Size(60, 20);
 			this.lblFecha.TabIndex = 5;
 			this.lblFecha.Text = "Fecha:";
 			// 
 			// dtpFecha
 			// 
-			this.dtpFecha.Location = new System.Drawing.Point(223, 175);
+			this.dtpFecha.Location = new System.Drawing.Point(217, 152);
 			this.dtpFecha.Name = "dtpFecha";
 			this.dtpFecha.Size = new System.Drawing.Size(200, 22);
 			this.dtpFecha.TabIndex = 6;
@@ -143,11 +151,28 @@
 			this.colHorario.ReadOnly = true;
 			this.colHorario.Width = 125;
 			// 
+			// btnGuardarCambios
+			// 
+			this.btnGuardarCambios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnGuardarCambios.FlatAppearance.BorderSize = 0;
+			this.btnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnGuardarCambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGuardarCambios.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnGuardarCambios.Location = new System.Drawing.Point(565, 509);
+			this.btnGuardarCambios.Name = "btnGuardarCambios";
+			this.btnGuardarCambios.Size = new System.Drawing.Size(131, 29);
+			this.btnGuardarCambios.TabIndex = 7;
+			this.btnGuardarCambios.Text = "Guardar Cambios";
+			this.btnGuardarCambios.UseVisualStyleBackColor = false;
+			this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
+			// 
 			// FrmEditarFuncion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
 			this.ClientSize = new System.Drawing.Size(929, 589);
+			this.Controls.Add(this.btnGuardarCambios);
 			this.Controls.Add(this.dtpFecha);
 			this.Controls.Add(this.lblFecha);
 			this.Controls.Add(this.lblHorario);
@@ -177,5 +202,6 @@
 		private System.Windows.Forms.Label lblHorario;
 		private System.Windows.Forms.Label lblFecha;
 		private System.Windows.Forms.DateTimePicker dtpFecha;
+		private System.Windows.Forms.Button btnGuardarCambios;
 	}
 }

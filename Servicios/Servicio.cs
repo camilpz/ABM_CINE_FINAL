@@ -33,5 +33,9 @@ namespace ABM_CINE_FINAL.Servicios
 		{
 			return HelperDAO.ObtenerInstancia().ObtenerFuncionesEditar();
 		}
+		public bool EditarFuncion(Funcion funcion)
+		{
+			return HelperDAO.ObtenerInstancia().EditarFuncion(funcion);
+		}
 	}
 }

@@ -167,8 +167,24 @@ namespace ABM_CINE_FINAL.Datos
             cnn.Close();
             return exito;
         }
-
-        public DataTable ObtenerFuncionesEditar()
+        public bool EditarFuncion(Funcion funcion)
+        {
+            bool exito = false;
+            Conectar("SP_Editar_Funcion");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@id_funcion", funcion.Id);
+            comando.Parameters.AddWithValue("@nro_sala", funcion.Sala.Id);
+            comando.Parameters.AddWithValue("@fecha", funcion.Fecha);
+            comando.Parameters.AddWithValue("@id_horario", funcion.Horario.Id);
+            if(comando.ExecuteNonQuery()> 0)
+            {
+                exito= true;
+            }
+            cnn.Close();
+            return exito;
+		}
+		
+		public DataTable ObtenerFuncionesEditar()               //ARREGLAR (TIRA ERROR RARO)
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Vis_Funciones");
@@ -195,7 +211,7 @@ namespace ABM_CINE_FINAL.Datos
             param.DbType = DbType.Int32;
             comando.Parameters.Add(param);
             comando.ExecuteNonQuery();
-
+            
 			int ultimo = (int)param.Value;
 			cnn.Close();
 			return ultimo;

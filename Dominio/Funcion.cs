@@ -14,13 +14,26 @@ namespace ABM_CINE_FINAL.Dominio
         public Sala Sala { get; set; }
         public DateTime Fecha { get; set; }
         public Horario Horario { get; set; }
-        public Idioma idioma { get; set; } //nuevo DUDOSO
+        public Idioma Idioma { get; set; } //nuevo DUDOSO
 
         //public string Mostrar()
         //{
         //    return Pelicula.Nombre + " - " + idioma.Nombre + " - " + Horario.Hora + " - " + Sala.Tipo;
         //}
-        
+        public Funcion()
+        {
+
+        }
+        public Funcion(int id, Pelicula peli, Sala sala, DateTime fecha, Horario hora, Idioma idio)
+        {
+            Id = id;
+            //Id_peli_idio = id_p_i;
+            Pelicula = peli;
+            Sala = sala;
+            Fecha = fecha;
+            Horario = hora;
+            Idioma = idio;
+        }
 
     }
 }
