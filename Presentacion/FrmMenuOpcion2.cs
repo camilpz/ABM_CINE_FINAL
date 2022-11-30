@@ -22,7 +22,7 @@ namespace ABM_CINE_FINAL.Presentacion
 
 		private void FrmMenuOpcion2_Load(object sender, EventArgs e)
 		{
-
+			btnSalirFActual.Enabled = false;
 		}
 		public void PersonalizarDisenio()
 		{
@@ -103,6 +103,7 @@ namespace ABM_CINE_FINAL.Presentacion
 			panelContenedor.Tag = formularioHijo;
 			formularioHijo.BringToFront();
 			formularioHijo.Show();
+			btnSalirFActual.Enabled = true;
 		}
 
 		private void btnPelícula_Click(object sender, EventArgs e)
@@ -113,6 +114,7 @@ namespace ABM_CINE_FINAL.Presentacion
 		private void btnSalir_Click(object sender, EventArgs e)
 		{
 			//CERRAR EL LOGIN????
+			
 		}
 
 		private void btnAcciones_Click(object sender, EventArgs e)
@@ -140,6 +142,7 @@ namespace ABM_CINE_FINAL.Presentacion
 			if(FormularioActivo != null)
 			{
 				FormularioActivo.Close();
+				btnSalirFActual.Enabled = false;
 			}
 			
 		}

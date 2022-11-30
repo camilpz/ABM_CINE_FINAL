@@ -124,12 +124,12 @@
             this.colClasificacion,
             this.colDuracion,
             this.colAcciones});
-			this.dgvPeliculas.Location = new System.Drawing.Point(166, 214);
+			this.dgvPeliculas.Location = new System.Drawing.Point(105, 188);
 			this.dgvPeliculas.Name = "dgvPeliculas";
 			this.dgvPeliculas.ReadOnly = true;
 			this.dgvPeliculas.RowHeadersWidth = 51;
 			this.dgvPeliculas.RowTemplate.Height = 24;
-			this.dgvPeliculas.Size = new System.Drawing.Size(615, 245);
+			this.dgvPeliculas.Size = new System.Drawing.Size(733, 267);
 			this.dgvPeliculas.TabIndex = 6;
 			this.dgvPeliculas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeliculas_CellContentClick);
 			// 

@@ -24,11 +24,12 @@ namespace ABM_CINE_FINAL
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
-        }
+			txtPassword.UseSystemPasswordChar = true;
+		}
         public bool VerificarCampos()
         {
-            bool valido = true;
+			
+			bool valido = true;
             if (txtDni.Text.Equals(string.Empty))
             {
                 valido = false;
@@ -78,14 +79,19 @@ namespace ABM_CINE_FINAL
 		{
             if (cbxMostrarPass.Checked)
             {
-                cbxMostrarPass.Image = Properties.Resources.OjoCerradoIcono;
-                txtPassword.UseSystemPasswordChar = true;  
+                cbxMostrarPass.Image = Properties.Resources.OjoAbiertoIcono;
+                txtPassword.UseSystemPasswordChar = false;  
             }
             else
             {
-                cbxMostrarPass.Image = Properties.Resources.OjoAbiertoIcono;
-				txtPassword.UseSystemPasswordChar = false;
+                cbxMostrarPass.Image = Properties.Resources.OjoCerradoIcono;
+				txtPassword.UseSystemPasswordChar = true;
 			}
+		}
+
+		private void btnSalir_Click(object sender, EventArgs e)
+		{
+            this.Dispose();
 		}
 	}
 }

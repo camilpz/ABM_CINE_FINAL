@@ -52,12 +52,12 @@
             this.colCliente,
             this.colFecha,
             this.colAcciones});
-			this.dgvComprobantes.Location = new System.Drawing.Point(63, 97);
+			this.dgvComprobantes.Location = new System.Drawing.Point(93, 138);
 			this.dgvComprobantes.Name = "dgvComprobantes";
 			this.dgvComprobantes.ReadOnly = true;
 			this.dgvComprobantes.RowHeadersWidth = 51;
 			this.dgvComprobantes.RowTemplate.Height = 24;
-			this.dgvComprobantes.Size = new System.Drawing.Size(652, 296);
+			this.dgvComprobantes.Size = new System.Drawing.Size(744, 339);
 			this.dgvComprobantes.TabIndex = 0;
 			this.dgvComprobantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComprobantes_CellContentClick);
 			// 
@@ -111,9 +111,9 @@
 			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnAceptar.Location = new System.Drawing.Point(625, 425);
+			this.btnAceptar.Location = new System.Drawing.Point(732, 494);
 			this.btnAceptar.Name = "btnAceptar";
-			this.btnAceptar.Size = new System.Drawing.Size(90, 34);
+			this.btnAceptar.Size = new System.Drawing.Size(123, 30);
 			this.btnAceptar.TabIndex = 1;
 			this.btnAceptar.Text = "Aceptar";
 			this.btnAceptar.UseVisualStyleBackColor = false;
@@ -121,9 +121,9 @@
 			// 
 			// txtDni
 			// 
-			this.txtDni.Location = new System.Drawing.Point(108, 49);
+			this.txtDni.Location = new System.Drawing.Point(156, 76);
 			this.txtDni.Name = "txtDni";
-			this.txtDni.Size = new System.Drawing.Size(212, 22);
+			this.txtDni.Size = new System.Drawing.Size(245, 22);
 			this.txtDni.TabIndex = 2;
 			// 
 			// lblFiltro
@@ -131,7 +131,7 @@
 			this.lblFiltro.AutoSize = true;
 			this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblFiltro.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblFiltro.Location = new System.Drawing.Point(60, 52);
+			this.lblFiltro.Location = new System.Drawing.Point(108, 79);
 			this.lblFiltro.Name = "lblFiltro";
 			this.lblFiltro.Size = new System.Drawing.Size(43, 20);
 			this.lblFiltro.TabIndex = 3;
@@ -144,9 +144,9 @@
 			this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnFiltrar.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnFiltrar.Location = new System.Drawing.Point(360, 44);
+			this.btnFiltrar.Location = new System.Drawing.Point(428, 70);
 			this.btnFiltrar.Name = "btnFiltrar";
-			this.btnFiltrar.Size = new System.Drawing.Size(103, 28);
+			this.btnFiltrar.Size = new System.Drawing.Size(136, 33);
 			this.btnFiltrar.TabIndex = 4;
 			this.btnFiltrar.Text = "Filtrar";
 			this.btnFiltrar.UseVisualStyleBackColor = false;
@@ -157,7 +157,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
-			this.ClientSize = new System.Drawing.Size(805, 487);
+			this.ClientSize = new System.Drawing.Size(929, 589);
 			this.Controls.Add(this.btnFiltrar);
 			this.Controls.Add(this.lblFiltro);
 			this.Controls.Add(this.txtDni);

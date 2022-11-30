@@ -43,15 +43,20 @@ namespace ABM_CINE_FINAL.Presentacion
 		public bool Verificar()
 		{
 			bool valido = true;
-			if(cboHorario.SelectedIndex == -1)
+			//if(cboHorario.SelectedIndex == -1)
+			//{
+			//	valido = false;
+			//	MessageBox.Show("Debe seleccionar un horario");
+			//}
+			//else if(cboSala.SelectedIndex ==-1)
+			//{
+			//	valido = false;
+			//	MessageBox.Show("Debe seleccionar una sala");
+			//}
+			if(!cboHorario.Enabled && !cboSala.Enabled && !dtpFecha.Enabled)
 			{
 				valido = false;
-				MessageBox.Show("Debe seleccionar un horario");
-			}
-			else if(cboSala.SelectedIndex ==-1)
-			{
-				valido = false;
-				MessageBox.Show("Debe seleccionar una sala");
+				MessageBox.Show("Debe seleccionar una función");
 			}
 			return valido;
 		}

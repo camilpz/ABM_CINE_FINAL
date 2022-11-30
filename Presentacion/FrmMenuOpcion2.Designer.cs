@@ -512,7 +512,7 @@
 			this.ClientSize = new System.Drawing.Size(1203, 636);
 			this.Controls.Add(this.panelContenedor);
 			this.Controls.Add(this.panelPrincipal);
-			this.MinimumSize = new System.Drawing.Size(950, 600);
+			this.MinimumSize = new System.Drawing.Size(1221, 683);
 			this.Name = "FrmMenuOpcion2";
 			this.Text = "Menú";
 			this.Load += new System.EventHandler(this.FrmMenuOpcion2_Load);

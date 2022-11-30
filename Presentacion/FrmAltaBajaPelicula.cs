@@ -48,6 +48,10 @@ namespace ABM_CINE_FINAL.Presentacion
                 {
                     CargarGrilla(txtNombre.Text, 1);
                 }
+                if(!rbtActiva.Checked && !rbtInactiva.Checked)
+                {
+                    MessageBox.Show("Debe seleccionar un estado");
+                }
             }
             else
             {

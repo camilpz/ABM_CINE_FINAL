@@ -33,10 +33,10 @@
 			this.lblPassword = new System.Windows.Forms.Label();
 			this.txtDni = new System.Windows.Forms.TextBox();
 			this.txtPassword = new System.Windows.Forms.TextBox();
-			this.cbxMostrarPass = new System.Windows.Forms.CheckBox();
 			this.btnIngresar = new System.Windows.Forms.Button();
 			this.btnSalir = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.cbxMostrarPass = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -76,23 +76,6 @@
 			this.txtPassword.Size = new System.Drawing.Size(289, 22);
 			this.txtPassword.TabIndex = 4;
 			// 
-			// cbxMostrarPass
-			// 
-			this.cbxMostrarPass.Appearance = System.Windows.Forms.Appearance.Button;
-			this.cbxMostrarPass.AutoSize = true;
-			this.cbxMostrarPass.FlatAppearance.BorderSize = 0;
-			this.cbxMostrarPass.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-			this.cbxMostrarPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-			this.cbxMostrarPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-			this.cbxMostrarPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.cbxMostrarPass.Image = global::ABM_CINE_FINAL.Properties.Resources.OjoAbiertoIcono;
-			this.cbxMostrarPass.Location = new System.Drawing.Point(451, 349);
-			this.cbxMostrarPass.Name = "cbxMostrarPass";
-			this.cbxMostrarPass.Size = new System.Drawing.Size(32, 32);
-			this.cbxMostrarPass.TabIndex = 5;
-			this.cbxMostrarPass.UseVisualStyleBackColor = true;
-			this.cbxMostrarPass.CheckedChanged += new System.EventHandler(this.cbxMostrarPass_CheckedChanged);
-			// 
 			// btnIngresar
 			// 
 			this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
@@ -121,6 +104,7 @@
 			this.btnSalir.TabIndex = 7;
 			this.btnSalir.Text = "Salir";
 			this.btnSalir.UseVisualStyleBackColor = false;
+			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
 			// 
 			// pictureBox1
 			// 
@@ -131,6 +115,23 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 8;
 			this.pictureBox1.TabStop = false;
+			// 
+			// cbxMostrarPass
+			// 
+			this.cbxMostrarPass.Appearance = System.Windows.Forms.Appearance.Button;
+			this.cbxMostrarPass.AutoSize = true;
+			this.cbxMostrarPass.FlatAppearance.BorderSize = 0;
+			this.cbxMostrarPass.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+			this.cbxMostrarPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+			this.cbxMostrarPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.cbxMostrarPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cbxMostrarPass.Image = global::ABM_CINE_FINAL.Properties.Resources.OjoCerradoIcono;
+			this.cbxMostrarPass.Location = new System.Drawing.Point(451, 349);
+			this.cbxMostrarPass.Name = "cbxMostrarPass";
+			this.cbxMostrarPass.Size = new System.Drawing.Size(32, 32);
+			this.cbxMostrarPass.TabIndex = 5;
+			this.cbxMostrarPass.UseVisualStyleBackColor = true;
+			this.cbxMostrarPass.CheckedChanged += new System.EventHandler(this.cbxMostrarPass_CheckedChanged);
 			// 
 			// FrmLogin
 			// 
@@ -146,6 +147,8 @@
 			this.Controls.Add(this.txtDni);
 			this.Controls.Add(this.lblPassword);
 			this.Controls.Add(this.lblDni);
+			this.MaximumSize = new System.Drawing.Size(602, 559);
+			this.MinimumSize = new System.Drawing.Size(602, 559);
 			this.Name = "FrmLogin";
 			this.Text = "Iniciar Sesión";
 			this.Load += new System.EventHandler(this.FrmLogin_Load);
