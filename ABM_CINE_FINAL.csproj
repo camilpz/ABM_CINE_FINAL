@@ -112,6 +112,12 @@
     <Compile Include="Presentacion\FrmEditarFuncion.Designer.cs">
       <DependentUpon>FrmEditarFuncion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmElegirButacas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmElegirButacas.Designer.cs">
+      <DependentUpon>FrmElegirButacas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="Presentacion\FrmEditarFuncion.resx">
       <DependentUpon>FrmEditarFuncion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmElegirButacas.resx">
+      <DependentUpon>FrmElegirButacas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,9 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CineLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo Cinema.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EstadoIcono.png" />
@@ -233,6 +239,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\VolverIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RolloPeliIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Cinema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaDisponibleIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaOcupadaIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaDisponible32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaOculpada32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaDisponible64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaOcupada64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -46,7 +46,15 @@ namespace ABM_CINE_FINAL.Formularios
             //}
             else
             {
-                CargarGrilla(Convert.ToInt32(txtDni.Text));
+                try //comprobar que solo ingresen nros
+                {
+					CargarGrilla(Convert.ToInt32(txtDni.Text));
+				}
+                catch
+                {
+                    MessageBox.Show("Debe ingresar sólo números");
+                }
+                
             }
         }
 

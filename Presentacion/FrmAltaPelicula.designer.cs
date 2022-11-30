@@ -50,8 +50,11 @@
 			this.colAccionesG = new System.Windows.Forms.DataGridViewButtonColumn();
 			this.btnAgregarGen = new System.Windows.Forms.Button();
 			this.btnAgregarIdi = new System.Windows.Forms.Button();
+			this.lblNuevaPeli = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvIdiomas)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblNombre
@@ -59,7 +62,7 @@
 			this.lblNombre.AutoSize = true;
 			this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblNombre.Location = new System.Drawing.Point(100, 84);
+			this.lblNombre.Location = new System.Drawing.Point(116, 153);
 			this.lblNombre.Name = "lblNombre";
 			this.lblNombre.Size = new System.Drawing.Size(74, 20);
 			this.lblNombre.TabIndex = 0;
@@ -70,7 +73,7 @@
 			this.lblClasificacion.AutoSize = true;
 			this.lblClasificacion.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
 			this.lblClasificacion.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblClasificacion.Location = new System.Drawing.Point(81, 144);
+			this.lblClasificacion.Location = new System.Drawing.Point(97, 219);
 			this.lblClasificacion.Name = "lblClasificacion";
 			this.lblClasificacion.Size = new System.Drawing.Size(102, 20);
 			this.lblClasificacion.TabIndex = 1;
@@ -81,7 +84,7 @@
 			this.lblGenero.AutoSize = true;
 			this.lblGenero.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
 			this.lblGenero.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblGenero.Location = new System.Drawing.Point(108, 212);
+			this.lblGenero.Location = new System.Drawing.Point(124, 287);
 			this.lblGenero.Name = "lblGenero";
 			this.lblGenero.Size = new System.Drawing.Size(67, 20);
 			this.lblGenero.TabIndex = 2;
@@ -92,7 +95,7 @@
 			this.lblIdioma.AutoSize = true;
 			this.lblIdioma.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
 			this.lblIdioma.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblIdioma.Location = new System.Drawing.Point(108, 267);
+			this.lblIdioma.Location = new System.Drawing.Point(124, 354);
 			this.lblIdioma.Name = "lblIdioma";
 			this.lblIdioma.Size = new System.Drawing.Size(63, 20);
 			this.lblIdioma.TabIndex = 3;
@@ -103,7 +106,7 @@
 			this.lblDuracion.AutoSize = true;
 			this.lblDuracion.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
 			this.lblDuracion.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblDuracion.Location = new System.Drawing.Point(4, 322);
+			this.lblDuracion.Location = new System.Drawing.Point(20, 422);
 			this.lblDuracion.Name = "lblDuracion";
 			this.lblDuracion.Size = new System.Drawing.Size(188, 20);
 			this.lblDuracion.TabIndex = 4;
@@ -112,14 +115,14 @@
 			// txtNombre
 			// 
 			this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
-			this.txtNombre.Location = new System.Drawing.Point(204, 84);
+			this.txtNombre.Location = new System.Drawing.Point(220, 153);
 			this.txtNombre.Name = "txtNombre";
 			this.txtNombre.Size = new System.Drawing.Size(291, 22);
 			this.txtNombre.TabIndex = 0;
 			// 
 			// txtDuracion
 			// 
-			this.txtDuracion.Location = new System.Drawing.Point(204, 316);
+			this.txtDuracion.Location = new System.Drawing.Point(220, 416);
 			this.txtDuracion.Name = "txtDuracion";
 			this.txtDuracion.Size = new System.Drawing.Size(224, 22);
 			this.txtDuracion.TabIndex = 6;
@@ -128,7 +131,7 @@
 			// cboClasificacion
 			// 
 			this.cboClasificacion.FormattingEnabled = true;
-			this.cboClasificacion.Location = new System.Drawing.Point(204, 144);
+			this.cboClasificacion.Location = new System.Drawing.Point(220, 219);
 			this.cboClasificacion.Name = "cboClasificacion";
 			this.cboClasificacion.Size = new System.Drawing.Size(224, 24);
 			this.cboClasificacion.TabIndex = 1;
@@ -136,7 +139,7 @@
 			// cboGeneros
 			// 
 			this.cboGeneros.FormattingEnabled = true;
-			this.cboGeneros.Location = new System.Drawing.Point(204, 212);
+			this.cboGeneros.Location = new System.Drawing.Point(220, 287);
 			this.cboGeneros.Name = "cboGeneros";
 			this.cboGeneros.Size = new System.Drawing.Size(224, 24);
 			this.cboGeneros.TabIndex = 2;
@@ -144,7 +147,7 @@
 			// cboIdiomas
 			// 
 			this.cboIdiomas.FormattingEnabled = true;
-			this.cboIdiomas.Location = new System.Drawing.Point(204, 267);
+			this.cboIdiomas.Location = new System.Drawing.Point(220, 354);
 			this.cboIdiomas.Name = "cboIdiomas";
 			this.cboIdiomas.Size = new System.Drawing.Size(224, 24);
 			this.cboIdiomas.TabIndex = 4;
@@ -155,9 +158,9 @@
 			this.btnAceptar.FlatAppearance.BorderSize = 0;
 			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnAceptar.Location = new System.Drawing.Point(264, 398);
+			this.btnAceptar.Location = new System.Drawing.Point(338, 495);
 			this.btnAceptar.Name = "btnAceptar";
-			this.btnAceptar.Size = new System.Drawing.Size(87, 29);
+			this.btnAceptar.Size = new System.Drawing.Size(106, 32);
 			this.btnAceptar.TabIndex = 7;
 			this.btnAceptar.Text = "Aceptar";
 			this.btnAceptar.UseVisualStyleBackColor = false;
@@ -169,9 +172,9 @@
 			this.btnCancelar.FlatAppearance.BorderSize = 0;
 			this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnCancelar.Location = new System.Drawing.Point(363, 398);
+			this.btnCancelar.Location = new System.Drawing.Point(464, 495);
 			this.btnCancelar.Name = "btnCancelar";
-			this.btnCancelar.Size = new System.Drawing.Size(87, 29);
+			this.btnCancelar.Size = new System.Drawing.Size(106, 32);
 			this.btnCancelar.TabIndex = 8;
 			this.btnCancelar.Text = "Cancelar";
 			this.btnCancelar.UseVisualStyleBackColor = false;
@@ -186,7 +189,7 @@
             this.colID,
             this.colIdioma,
             this.colAcciones});
-			this.dgvIdiomas.Location = new System.Drawing.Point(578, 68);
+			this.dgvIdiomas.Location = new System.Drawing.Point(593, 106);
 			this.dgvIdiomas.Name = "dgvIdiomas";
 			this.dgvIdiomas.ReadOnly = true;
 			this.dgvIdiomas.RowHeadersWidth = 51;
@@ -229,7 +232,7 @@
             this.colIDG,
             this.colGenero,
             this.colAccionesG});
-			this.dgvGeneros.Location = new System.Drawing.Point(578, 224);
+			this.dgvGeneros.Location = new System.Drawing.Point(593, 292);
 			this.dgvGeneros.Name = "dgvGeneros";
 			this.dgvGeneros.ReadOnly = true;
 			this.dgvGeneros.RowHeadersWidth = 51;
@@ -269,9 +272,9 @@
 			this.btnAgregarGen.FlatAppearance.BorderSize = 0;
 			this.btnAgregarGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAgregarGen.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnAgregarGen.Location = new System.Drawing.Point(448, 209);
+			this.btnAgregarGen.Location = new System.Drawing.Point(464, 284);
 			this.btnAgregarGen.Name = "btnAgregarGen";
-			this.btnAgregarGen.Size = new System.Drawing.Size(87, 29);
+			this.btnAgregarGen.Size = new System.Drawing.Size(98, 37);
 			this.btnAgregarGen.TabIndex = 3;
 			this.btnAgregarGen.Text = "Agregar";
 			this.btnAgregarGen.UseVisualStyleBackColor = false;
@@ -283,20 +286,43 @@
 			this.btnAgregarIdi.FlatAppearance.BorderSize = 0;
 			this.btnAgregarIdi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAgregarIdi.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnAgregarIdi.Location = new System.Drawing.Point(448, 268);
+			this.btnAgregarIdi.Location = new System.Drawing.Point(464, 343);
 			this.btnAgregarIdi.Name = "btnAgregarIdi";
-			this.btnAgregarIdi.Size = new System.Drawing.Size(87, 29);
+			this.btnAgregarIdi.Size = new System.Drawing.Size(98, 37);
 			this.btnAgregarIdi.TabIndex = 5;
 			this.btnAgregarIdi.Text = "Agregar";
 			this.btnAgregarIdi.UseVisualStyleBackColor = false;
 			this.btnAgregarIdi.Click += new System.EventHandler(this.btnAgregarIdi_Click);
+			// 
+			// lblNuevaPeli
+			// 
+			this.lblNuevaPeli.AutoSize = true;
+			this.lblNuevaPeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblNuevaPeli.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblNuevaPeli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.lblNuevaPeli.Location = new System.Drawing.Point(96, 53);
+			this.lblNuevaPeli.Name = "lblNuevaPeli";
+			this.lblNuevaPeli.Size = new System.Drawing.Size(188, 29);
+			this.lblNuevaPeli.TabIndex = 15;
+			this.lblNuevaPeli.Text = "Nueva Película";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = global::ABM_CINE_FINAL.Properties.Resources.RolloPeliIcono;
+			this.pictureBox1.Location = new System.Drawing.Point(290, 55);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(40, 27);
+			this.pictureBox1.TabIndex = 16;
+			this.pictureBox1.TabStop = false;
 			// 
 			// FrmAltaPelicula
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
-			this.ClientSize = new System.Drawing.Size(929, 537);
+			this.ClientSize = new System.Drawing.Size(929, 589);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.lblNuevaPeli);
 			this.Controls.Add(this.btnAgregarIdi);
 			this.Controls.Add(this.btnAgregarGen);
 			this.Controls.Add(this.dgvGeneros);
@@ -318,6 +344,7 @@
 			this.Load += new System.EventHandler(this.FrmAltaPelicula_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvIdiomas)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -347,5 +374,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colIDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGenero;
         private System.Windows.Forms.DataGridViewButtonColumn colAccionesG;
-    }
+		private System.Windows.Forms.Label lblNuevaPeli;
+		private System.Windows.Forms.PictureBox pictureBox1;
+	}
 }

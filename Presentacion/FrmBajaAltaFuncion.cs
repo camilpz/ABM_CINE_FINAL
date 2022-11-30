@@ -41,11 +41,15 @@ namespace ABM_CINE_FINAL.Presentacion
             if (rbtAlta.Checked)
             {
                 CargarGrilla(1);
-            }
+                dgvFunciones.Columns["colAcciones"].HeaderText = "Dar de baja";
+
+
+			}
             else if (rbtBaja.Checked)
             {
                 CargarGrilla(2);
-            }
+				dgvFunciones.Columns["colAcciones"].HeaderText = "Dar de alta";
+			}
         }
         private void rbtAlta_CheckedChanged(object sender, EventArgs e)
         {

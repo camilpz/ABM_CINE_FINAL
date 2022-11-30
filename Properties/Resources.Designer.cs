@@ -63,6 +63,26 @@ namespace ABM_CINE_FINAL.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButacaDisponible64 {
+            get {
+                object obj = ResourceManager.GetObject("ButacaDisponible64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ButacaOcupada64 {
+            get {
+                object obj = ResourceManager.GetObject("ButacaOcupada64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CambiarIcono {
             get {
                 object obj = ResourceManager.GetObject("CambiarIcono", resourceCulture);
@@ -86,6 +106,16 @@ namespace ABM_CINE_FINAL.Properties {
         internal static System.Drawing.Bitmap Lentes3DIcono {
             get {
                 object obj = ResourceManager.GetObject("Lentes3DIcono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Cinema {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Cinema", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +176,16 @@ namespace ABM_CINE_FINAL.Properties {
         internal static System.Drawing.Bitmap ReportesIcono {
             get {
                 object obj = ResourceManager.GetObject("ReportesIcono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RolloPeliIcono {
+            get {
+                object obj = ResourceManager.GetObject("RolloPeliIcono", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
 			this.dgvFunciones = new System.Windows.Forms.DataGridView();
+			this.rbtAlta = new System.Windows.Forms.RadioButton();
+			this.rbtBaja = new System.Windows.Forms.RadioButton();
+			this.lblEstado = new System.Windows.Forms.Label();
 			this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colPelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colIdioma = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,9 +39,6 @@
 			this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colHorario = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
-			this.rbtAlta = new System.Windows.Forms.RadioButton();
-			this.rbtBaja = new System.Windows.Forms.RadioButton();
-			this.lblEstado = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvFunciones)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -55,14 +55,53 @@
             this.colFecha,
             this.colHorario,
             this.colAcciones});
-			this.dgvFunciones.Location = new System.Drawing.Point(120, 121);
+			this.dgvFunciones.Location = new System.Drawing.Point(74, 129);
 			this.dgvFunciones.Name = "dgvFunciones";
 			this.dgvFunciones.ReadOnly = true;
 			this.dgvFunciones.RowHeadersWidth = 51;
 			this.dgvFunciones.RowTemplate.Height = 24;
-			this.dgvFunciones.Size = new System.Drawing.Size(674, 300);
+			this.dgvFunciones.Size = new System.Drawing.Size(786, 395);
 			this.dgvFunciones.TabIndex = 0;
 			this.dgvFunciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFunciones_CellContentClick);
+			// 
+			// rbtAlta
+			// 
+			this.rbtAlta.AutoSize = true;
+			this.rbtAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtAlta.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.rbtAlta.Location = new System.Drawing.Point(229, 64);
+			this.rbtAlta.Name = "rbtAlta";
+			this.rbtAlta.Size = new System.Drawing.Size(59, 24);
+			this.rbtAlta.TabIndex = 1;
+			this.rbtAlta.TabStop = true;
+			this.rbtAlta.Text = "Alta";
+			this.rbtAlta.UseVisualStyleBackColor = true;
+			this.rbtAlta.CheckedChanged += new System.EventHandler(this.rbtAlta_CheckedChanged);
+			// 
+			// rbtBaja
+			// 
+			this.rbtBaja.AutoSize = true;
+			this.rbtBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtBaja.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.rbtBaja.Location = new System.Drawing.Point(311, 64);
+			this.rbtBaja.Name = "rbtBaja";
+			this.rbtBaja.Size = new System.Drawing.Size(64, 24);
+			this.rbtBaja.TabIndex = 2;
+			this.rbtBaja.TabStop = true;
+			this.rbtBaja.Text = "Baja";
+			this.rbtBaja.UseVisualStyleBackColor = true;
+			this.rbtBaja.CheckedChanged += new System.EventHandler(this.rbtBaja_CheckedChanged);
+			// 
+			// lblEstado
+			// 
+			this.lblEstado.AutoSize = true;
+			this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblEstado.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblEstado.Location = new System.Drawing.Point(139, 66);
+			this.lblEstado.Name = "lblEstado";
+			this.lblEstado.Size = new System.Drawing.Size(66, 20);
+			this.lblEstado.TabIndex = 3;
+			this.lblEstado.Text = "Estado:";
 			// 
 			// colID
 			// 
@@ -119,53 +158,16 @@
 			this.colAcciones.MinimumWidth = 6;
 			this.colAcciones.Name = "colAcciones";
 			this.colAcciones.ReadOnly = true;
+			this.colAcciones.Text = "X";
+			this.colAcciones.UseColumnTextForButtonValue = true;
 			this.colAcciones.Width = 125;
-			// 
-			// rbtAlta
-			// 
-			this.rbtAlta.AutoSize = true;
-			this.rbtAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbtAlta.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.rbtAlta.Location = new System.Drawing.Point(243, 61);
-			this.rbtAlta.Name = "rbtAlta";
-			this.rbtAlta.Size = new System.Drawing.Size(59, 24);
-			this.rbtAlta.TabIndex = 1;
-			this.rbtAlta.TabStop = true;
-			this.rbtAlta.Text = "Alta";
-			this.rbtAlta.UseVisualStyleBackColor = true;
-			this.rbtAlta.CheckedChanged += new System.EventHandler(this.rbtAlta_CheckedChanged);
-			// 
-			// rbtBaja
-			// 
-			this.rbtBaja.AutoSize = true;
-			this.rbtBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbtBaja.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.rbtBaja.Location = new System.Drawing.Point(325, 61);
-			this.rbtBaja.Name = "rbtBaja";
-			this.rbtBaja.Size = new System.Drawing.Size(64, 24);
-			this.rbtBaja.TabIndex = 2;
-			this.rbtBaja.TabStop = true;
-			this.rbtBaja.Text = "Baja";
-			this.rbtBaja.UseVisualStyleBackColor = true;
-			this.rbtBaja.CheckedChanged += new System.EventHandler(this.rbtBaja_CheckedChanged);
-			// 
-			// lblEstado
-			// 
-			this.lblEstado.AutoSize = true;
-			this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblEstado.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblEstado.Location = new System.Drawing.Point(153, 63);
-			this.lblEstado.Name = "lblEstado";
-			this.lblEstado.Size = new System.Drawing.Size(66, 20);
-			this.lblEstado.TabIndex = 3;
-			this.lblEstado.Text = "Estado:";
 			// 
 			// FrmBajaAltaFuncion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
-			this.ClientSize = new System.Drawing.Size(929, 537);
+			this.ClientSize = new System.Drawing.Size(929, 589);
 			this.Controls.Add(this.lblEstado);
 			this.Controls.Add(this.rbtBaja);
 			this.Controls.Add(this.rbtAlta);
@@ -182,15 +184,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvFunciones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPelicula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIdioma;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSala;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colHorario;
-        private System.Windows.Forms.DataGridViewButtonColumn colAcciones;
         private System.Windows.Forms.RadioButton rbtAlta;
         private System.Windows.Forms.RadioButton rbtBaja;
         private System.Windows.Forms.Label lblEstado;
-    }
+		private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+		private System.Windows.Forms.DataGridViewTextBoxColumn colPelicula;
+		private System.Windows.Forms.DataGridViewTextBoxColumn colIdioma;
+		private System.Windows.Forms.DataGridViewTextBoxColumn colSala;
+		private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
+		private System.Windows.Forms.DataGridViewTextBoxColumn colHorario;
+		private System.Windows.Forms.DataGridViewButtonColumn colAcciones;
+	}
 }
