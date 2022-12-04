@@ -14,7 +14,9 @@ namespace ABM_CINE_FINAL.Presentacion
 {
 	public partial class FrmElegirButacas : Form
 	{
-		List<Funcion> LFunciones= new List<Funcion>();
+		List<Image> Limagenes = new List<Image>() { Properties.Resources.ButacaIcono64, Properties.Resources.ButacaDisponible64, Properties.Resources.ButacaOcupada64 };
+		List<Funcion> LFunciones= new List<Funcion>();//sacar
+		List<Detalle> LDetalles = new List<Detalle>();
 		Servicio servicio= new Servicio();
 		List<Butaca> LButacas = new List<Butaca>();
 		List<Butaca> LReserva = new List<Butaca>();
@@ -49,7 +51,7 @@ namespace ABM_CINE_FINAL.Presentacion
 			{
 				Butaca butaca = new Butaca();
 				butaca.Id = Convert.ToInt32(fila["ID"]);
-				butaca.Nombre = fila["Nombre"].ToString(); //FIJARSE BIEN LOS NOMBRES
+				butaca.Nombre = fila["Nombre"].ToString(); 
 				butaca.Estado = Convert.ToInt32(fila["Id_Estado"]);
 
 				LButacas.Add(butaca);
@@ -69,25 +71,20 @@ namespace ABM_CINE_FINAL.Presentacion
 			{
 				foreach (CheckBox boton in panelButacas.Controls.OfType<CheckBox>())
 				{
-					if(Convert.ToInt32(boton.Tag) == butaca.Id && butaca.Id == 2)
+					if(Convert.ToInt32(boton.Tag) == butaca.Id) //&& butaca.Id == 2
 					{
-						boton.Image = Properties.Resources.ButacaOcupada64;
+						
+						boton.Image = Limagenes[2];
 						boton.Enabled = false;
 					}
 				}
 			}
 		}
-		private void AgregarButaca(Butaca butaca)
+		private void AgregarButaca(Butaca butaca) 
 		{
-			for (int i = 0; i < LButacas.Count(); i++)
-			{
-				if (LButacas[i].Id.ToString() == butaca.Id.ToString())
-				{
-					LReserva.Add(LButacas[i]);
-				}
-			}
+			LReserva.Add(butaca);
 		}
-		private void EliminarButacas(Butaca butaca)
+		private void EliminarButacas(Butaca butaca) 
 		{
 			for (int i = 0; i < LReserva.Count(); i++)
 			{
@@ -95,23 +92,6 @@ namespace ABM_CINE_FINAL.Presentacion
 				{
 					LReserva.RemoveAt(i);
 				}
-			}
-		}
-		private void Butaca_Click(object sender, EventArgs e)
-		{
-			CheckBox boton = sender as CheckBox;
-			Butaca butaca = new Butaca();
-			butaca.Id = Convert.ToInt32(boton.Tag);
-
-			if (boton.Checked)
-			{
-				boton.Image = Properties.Resources.ButacaDisponible64;
-				AgregarButaca(butaca);
-			}
-			else
-			{
-				boton.Image = Properties.Resources.ButacaIcono64;
-				EliminarButacas(butaca);
 			}
 		}
 		private void cboPeliculas_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,29 +170,39 @@ namespace ABM_CINE_FINAL.Presentacion
 				valido = false;
 				MessageBox.Show("Debe seleccionar una sala");
 			}
-			else if (cboHorarios.SelectedIndex.Equals(-1))
-			{
-				valido = false;
-				MessageBox.Show("Debe seleccionar un horario");
-			}
 			else if (cboFechas.SelectedIndex.Equals(-1))
 			{
 				valido = false;
 				MessageBox.Show("Debe seleccionar una fecha");
 			}
+			else if (cboHorarios.SelectedIndex.Equals(-1))
+			{
+				valido = false;
+				MessageBox.Show("Debe seleccionar un horario");
+			}
+			
 			return valido;
 		}
 		private void btnContinuar_Click(object sender, EventArgs e)
 		{
-			FrmAltaComprobante f_a_comprobante = new FrmAltaComprobante();
-			f_a_comprobante.Show();
-			this.Hide();
+			if (LDetalles.Count > 0)
+			{
+				FrmAltaComprobante f_a_comprobante = new FrmAltaComprobante();
+				f_a_comprobante.Ldetalles = LDetalles; //PASAR LA LISTA DE DETALLES
+				f_a_comprobante.Show();
+				this.Hide();
+			}
+			else
+			{
+				MessageBox.Show("Debe seleccionar al menos una función");
+			}
 		}
 
 		private void btnFiltrar_Click(object sender, EventArgs e)
 		{
 			if (Verificar())
 			{
+				panelButacas.Enabled = true;
 				DataRowView hora = (DataRowView)cboHorarios.SelectedItem;
 				int id_horario = Convert.ToInt32(hora["ID"]);
 				DataRowView fecha = (DataRowView)cboFechas.SelectedItem;
@@ -229,6 +219,98 @@ namespace ABM_CINE_FINAL.Presentacion
 
 				CargarLista(id_funcion);
 				CargarButacas();
+			}
+		}
+
+		private void Click_Butaca(object sender, EventArgs e)
+		{
+			CheckBox boton = sender as CheckBox;
+			Butaca butaca = new Butaca();
+			butaca.Id = Convert.ToInt32(boton.Tag);
+
+			if (boton.Checked)
+			{
+				boton.Image = Limagenes[1];
+				AgregarButaca(butaca);
+				lblCantButacas.Text = $"Cantidad de butacas seleccionadas: {CantidadButacas()}";
+			}
+			
+			else
+			{
+				boton.Image = Limagenes[0];
+				EliminarButacas(butaca);
+				lblCantButacas.Text = $"Cantidad de butacas seleccionadas: {CantidadButacas()}";
+			}
+		}
+		private void Limpiar_Butacas()
+		{
+			LButacas.Clear();
+			LReserva.Clear();
+			foreach (CheckBox cb in panelButacas.Controls.OfType<CheckBox>())
+			{
+				cb.Image = Limagenes[0];
+				cb.Checked = false;
+			}
+			panelButacas.Enabled = false;
+		}
+		public string CantidadFunciones()
+		{
+			string funciones = "";
+			foreach (Detalle det in LDetalles)
+			{
+				funciones += " " + det.Funcion.Pelicula.Nombre + "-";
+			}
+			return funciones;
+		}
+		public int CantidadButacas()
+		{
+			return LReserva.Count;
+		}
+		private void btnAceptar_Click(object sender, EventArgs e)
+		{
+			if (LReserva.Count > 0)
+			{
+				DataRowView hora = (DataRowView)cboHorarios.SelectedItem;
+				int id_horario = Convert.ToInt32(hora["ID"]);
+				DataRowView fecha = (DataRowView)cboFechas.SelectedItem;
+				DateTime fec = Convert.ToDateTime(fecha["Fecha"]);
+				DataRowView sala = (DataRowView)cboSala.SelectedItem;
+				int id_sala = Convert.ToInt32(sala["ID"]);
+				double precio = Convert.ToDouble(sala["Precio"]);
+				DataRowView idioma = (DataRowView)cboIdiomas.SelectedItem;
+				int id_idi = Convert.ToInt32(idioma["ID"]);
+				DataRowView peli = (DataRowView)cboPeliculas.SelectedItem;
+				int id = Convert.ToInt32(peli["ID"]);
+				string nom = peli["Pelicula"].ToString();
+
+
+				Pelicula pelicula = new Pelicula();
+
+				int id_fun = servicio.ObtenerFuncionID(id, id_idi, id_sala, id_horario, fec);
+				pelicula.Nombre = nom;
+				List<Butaca> lbut = new List<Butaca>();
+
+				foreach (Butaca b in LReserva)
+				{
+					lbut.Add(b);
+				}
+				Sala sal = new Sala(id_sala, precio, lbut);
+
+				Funcion funcion = new Funcion(id_fun, pelicula, sal);
+				Detalle detalle = new Detalle();
+				detalle.Funcion = funcion;
+				LDetalles.Add(detalle);
+
+				Limpiar_Butacas();
+				lblCantButacas.Text = $"Cantidad de butacas seleccionadas: {CantidadButacas()}";
+				Inicializar();
+				CargarCombo(cboPeliculas, servicio.ObtenerFuncionesPeliculas());
+
+				lblCantFunciones.Text = $"Funciones seleccionadas: {CantidadFunciones()}";
+			}
+			else
+			{
+				MessageBox.Show("Debe seleccionar al menos una butaca");
 			}
 		}
 	}

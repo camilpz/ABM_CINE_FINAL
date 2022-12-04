@@ -53,6 +53,73 @@ namespace ABM_CINE_FINAL.Datos
             }
             return resultado;
         }
+        public bool AltaComprobante(Comprobante comprobante)
+        {
+            bool exito = false;
+            SqlTransaction t = null;
+            try
+            {
+                Conectar("SP_Alta_Comprobante");
+                t = cnn.BeginTransaction();
+                comando.Transaction = t;
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@forma_pago", comprobante.Id_forma_pago);
+                comando.Parameters.AddWithValue("@id_cliente", comprobante.Cliente); //VER DE CAMBIARLO SOLO POR EL NOMBRE
+                comando.Parameters.AddWithValue("@fecha", comprobante.Fecha);
+
+                SqlParameter param = new SqlParameter();
+                param.ParameterName = "@nro_comprobante";
+                param.DbType = DbType.Int32;
+                param.Direction = ParameterDirection.Output;
+                comando.Parameters.Add(param);
+                comando.ExecuteNonQuery();
+
+                int nro_comprobante = (int)param.Value;
+
+                foreach (Detalle det in comprobante.LisDetalles)
+                {
+                    SqlCommand comanddo2 = new SqlCommand();
+                    comanddo2.Connection = cnn;
+                    comanddo2.CommandType = CommandType.StoredProcedure;
+                    comanddo2.CommandText = "SP_Alta_Detalle";
+                    comanddo2.Transaction = t;
+                    comanddo2.Parameters.Clear();
+                    comanddo2.Parameters.AddWithValue("@nro_comprobante", nro_comprobante);
+                    comanddo2.Parameters.AddWithValue("@precio", det.Funcion.Sala.Precio);
+                    if (comprobante.Id_promo.Equals(0))
+                    {
+						comanddo2.Parameters.AddWithValue("@id_promo", null);
+					}
+                    else
+                    {
+						comanddo2.Parameters.AddWithValue("@id_promo", comprobante.Id_promo);
+					}
+                    comanddo2.ExecuteNonQuery();
+                    foreach (Butaca b in det.Funcion.Sala.LisButacas)
+                    {
+                        SqlCommand comando3 = new SqlCommand();
+						comando3.Connection = cnn;
+						comando3.CommandType = CommandType.StoredProcedure;
+						comando3.CommandText = "SP_Baja_Butaca";
+						comando3.Transaction = t;
+                        comando3.Parameters.Clear();
+                        comando3.Parameters.AddWithValue("@id_funcion", det.Funcion.Id);
+                        comando3.Parameters.AddWithValue("@id_butaca", b.Id);
+                        comando3.ExecuteNonQuery();
+					}
+				}
+                t.Commit();
+                cnn.Close();
+                exito = true;
+
+            }
+            catch (Exception)
+            {
+                t.Rollback();
+                cnn.Close();
+            }
+            return exito;
+        }
         public bool AltaPelicula(Pelicula pelicula)
         {
             bool exito = false;
@@ -183,16 +250,32 @@ namespace ABM_CINE_FINAL.Datos
             cnn.Close();
             return exito;
 		}
-		
+		public int ObtenerIDPXI(int id_pelicula, int id_idioma)
+        {
+            Conectar("SP_Obtener_ID_PXI");
+            comando.Parameters.Clear();
+            SqlParameter param = new SqlParameter();
+            comando.Parameters.AddWithValue("@id_pelicula", id_pelicula);
+            comando.Parameters.AddWithValue("@id_idioma", id_idioma);
+            param.ParameterName = "@id_pxi";
+            param.DbType = DbType.Int32;
+            param.Direction = ParameterDirection.Output;
+            comando.Parameters.Add(param);
+            comando.ExecuteNonQuery();
+            cnn.Close();
+            int id_pxi = (int)param.Value;
+            return id_pxi;
+        }
 
         public DataTable ObtenerFuncionesPeliculas()
         {
-            DataTable table= new DataTable();
-            Conectar("SP_Reservas_Peliculas");
-            table.Load(comando.ExecuteReader());
-            cnn.Close();
-            return table;
-        }
+			DataTable table = new DataTable();
+			Conectar("SP_Reservas_Peliculas");
+            comando.Parameters.Clear();
+			table.Load(comando.ExecuteReader());
+			cnn.Close();
+			return table;
+		}
         public DataTable ObtenerFuncionesIdiomas(int id_pelicula)
         {
             DataTable tabla = new DataTable();
@@ -275,6 +358,7 @@ namespace ABM_CINE_FINAL.Datos
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Vis_Funciones");
+            comando.Parameters.Clear();
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;
@@ -292,6 +376,7 @@ namespace ABM_CINE_FINAL.Datos
         public int ObtenerUltimoComprobante()
         {
             Conectar("SP_Obtener_Ultimo_Comprobante");
+            comando.Parameters.Clear();
             SqlParameter param = new SqlParameter();
             param.ParameterName = "@ultimo";
             param.Direction = ParameterDirection.Output;
@@ -317,6 +402,7 @@ namespace ABM_CINE_FINAL.Datos
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Obtener_Peliculas_Activas");
+            comando.Parameters.Clear();
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;

@@ -34,6 +34,12 @@ namespace ABM_CINE_FINAL.Dominio
             Horario = hora;
             Idioma = idio;
         }
+        public Funcion(int id, Pelicula peli, Sala sala)
+        {
+            Id = id;
+            Pelicula = peli;
+            Sala = sala;
+        }
 
     }
 }

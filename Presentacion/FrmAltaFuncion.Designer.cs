@@ -50,7 +50,7 @@
 			this.lblPelicula.AutoSize = true;
 			this.lblPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPelicula.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblPelicula.Location = new System.Drawing.Point(115, 118);
+			this.lblPelicula.Location = new System.Drawing.Point(156, 119);
 			this.lblPelicula.Name = "lblPelicula";
 			this.lblPelicula.Size = new System.Drawing.Size(73, 20);
 			this.lblPelicula.TabIndex = 0;
@@ -61,7 +61,7 @@
 			this.lblIdiomas.AutoSize = true;
 			this.lblIdiomas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblIdiomas.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblIdiomas.Location = new System.Drawing.Point(121, 183);
+			this.lblIdiomas.Location = new System.Drawing.Point(162, 184);
 			this.lblIdiomas.Name = "lblIdiomas";
 			this.lblIdiomas.Size = new System.Drawing.Size(72, 20);
 			this.lblIdiomas.TabIndex = 1;
@@ -72,7 +72,7 @@
 			this.lblFecha.AutoSize = true;
 			this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblFecha.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblFecha.Location = new System.Drawing.Point(128, 251);
+			this.lblFecha.Location = new System.Drawing.Point(169, 252);
 			this.lblFecha.Name = "lblFecha";
 			this.lblFecha.Size = new System.Drawing.Size(60, 20);
 			this.lblFecha.TabIndex = 2;
@@ -83,7 +83,7 @@
 			this.lblHorarios.AutoSize = true;
 			this.lblHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblHorarios.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblHorarios.Location = new System.Drawing.Point(114, 384);
+			this.lblHorarios.Location = new System.Drawing.Point(155, 385);
 			this.lblHorarios.Name = "lblHorarios";
 			this.lblHorarios.Size = new System.Drawing.Size(79, 20);
 			this.lblHorarios.TabIndex = 3;
@@ -92,7 +92,7 @@
 			// cboPeliculas
 			// 
 			this.cboPeliculas.FormattingEnabled = true;
-			this.cboPeliculas.Location = new System.Drawing.Point(206, 118);
+			this.cboPeliculas.Location = new System.Drawing.Point(247, 119);
 			this.cboPeliculas.Name = "cboPeliculas";
 			this.cboPeliculas.Size = new System.Drawing.Size(329, 24);
 			this.cboPeliculas.TabIndex = 4;
@@ -101,33 +101,33 @@
 			// cboIdiomas
 			// 
 			this.cboIdiomas.FormattingEnabled = true;
-			this.cboIdiomas.Location = new System.Drawing.Point(206, 183);
+			this.cboIdiomas.Location = new System.Drawing.Point(247, 184);
 			this.cboIdiomas.Name = "cboIdiomas";
-			this.cboIdiomas.Size = new System.Drawing.Size(200, 24);
+			this.cboIdiomas.Size = new System.Drawing.Size(246, 24);
 			this.cboIdiomas.TabIndex = 5;
 			this.cboIdiomas.SelectedIndexChanged += new System.EventHandler(this.cboIdiomas_SelectedIndexChanged);
 			// 
 			// dtpFecha
 			// 
-			this.dtpFecha.Location = new System.Drawing.Point(206, 251);
+			this.dtpFecha.Location = new System.Drawing.Point(247, 252);
 			this.dtpFecha.Name = "dtpFecha";
-			this.dtpFecha.Size = new System.Drawing.Size(200, 22);
+			this.dtpFecha.Size = new System.Drawing.Size(246, 22);
 			this.dtpFecha.TabIndex = 6;
 			this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
 			// 
 			// cboHorarios
 			// 
 			this.cboHorarios.FormattingEnabled = true;
-			this.cboHorarios.Location = new System.Drawing.Point(206, 384);
+			this.cboHorarios.Location = new System.Drawing.Point(247, 385);
 			this.cboHorarios.Name = "cboHorarios";
-			this.cboHorarios.Size = new System.Drawing.Size(200, 24);
+			this.cboHorarios.Size = new System.Drawing.Size(246, 24);
 			this.cboHorarios.TabIndex = 7;
 			// 
 			// btnCrear
 			// 
 			this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCrear.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnCrear.Location = new System.Drawing.Point(327, 507);
+			this.btnCrear.Location = new System.Drawing.Point(323, 486);
 			this.btnCrear.Name = "btnCrear";
 			this.btnCrear.Size = new System.Drawing.Size(98, 40);
 			this.btnCrear.TabIndex = 9;
@@ -139,7 +139,7 @@
 			// 
 			this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnCancelar.Location = new System.Drawing.Point(453, 507);
+			this.btnCancelar.Location = new System.Drawing.Point(449, 486);
 			this.btnCancelar.Name = "btnCancelar";
 			this.btnCancelar.Size = new System.Drawing.Size(101, 38);
 			this.btnCancelar.TabIndex = 10;
@@ -151,7 +151,7 @@
 			this.lblSalas.AutoSize = true;
 			this.lblSalas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblSalas.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.lblSalas.Location = new System.Drawing.Point(138, 328);
+			this.lblSalas.Location = new System.Drawing.Point(179, 329);
 			this.lblSalas.Name = "lblSalas";
 			this.lblSalas.Size = new System.Drawing.Size(47, 20);
 			this.lblSalas.TabIndex = 11;
@@ -160,9 +160,9 @@
 			// cboSala
 			// 
 			this.cboSala.FormattingEnabled = true;
-			this.cboSala.Location = new System.Drawing.Point(206, 320);
+			this.cboSala.Location = new System.Drawing.Point(247, 321);
 			this.cboSala.Name = "cboSala";
-			this.cboSala.Size = new System.Drawing.Size(200, 24);
+			this.cboSala.Size = new System.Drawing.Size(246, 24);
 			this.cboSala.TabIndex = 12;
 			this.cboSala.SelectedIndexChanged += new System.EventHandler(this.cboSala_SelectedIndexChanged);
 			// 
@@ -172,7 +172,7 @@
 			this.lblNuevaFuncion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblNuevaFuncion.ForeColor = System.Drawing.SystemColors.ControlDark;
 			this.lblNuevaFuncion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.lblNuevaFuncion.Location = new System.Drawing.Point(92, 53);
+			this.lblNuevaFuncion.Location = new System.Drawing.Point(133, 54);
 			this.lblNuevaFuncion.Name = "lblNuevaFuncion";
 			this.lblNuevaFuncion.Size = new System.Drawing.Size(187, 29);
 			this.lblNuevaFuncion.TabIndex = 16;
@@ -185,7 +185,7 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.button1.Location = new System.Drawing.Point(327, 506);
+			this.button1.Location = new System.Drawing.Point(323, 485);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(98, 40);
 			this.button1.TabIndex = 9;
@@ -200,7 +200,7 @@
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button2.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.button2.Location = new System.Drawing.Point(453, 506);
+			this.button2.Location = new System.Drawing.Point(449, 485);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(101, 38);
 			this.button2.TabIndex = 10;

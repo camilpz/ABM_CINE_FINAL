@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ABM_CINE_FINAL.Datos;
 using ABM_CINE_FINAL.Dominio;
+using ABM_CINE_FINAL.Servicios;
 
 namespace ABM_CINE_FINAL.Presentacion
 {
     public partial class FrmAltaFuncion : Form
     {
-        Funcion funcion;
+        Servicio servicio = new Servicio();
         public FrmAltaFuncion()
         {
             InitializeComponent();
@@ -81,7 +82,8 @@ namespace ABM_CINE_FINAL.Presentacion
         {
             if(cboPeliculas.SelectedIndex != -1)
             {
-                int id_peli = Convert.ToInt32(cboPeliculas.SelectedValue);
+                DataRowView peli = (DataRowView)cboPeliculas.SelectedItem;
+                int id_peli = Convert.ToInt32(peli[0]);
                 cboIdiomas.Enabled = true;
                 CargarCombos(cboIdiomas, HelperDAO.ObtenerInstancia().ObtenerIdiomasPeliculas(id_peli));
             }
@@ -93,6 +95,7 @@ namespace ABM_CINE_FINAL.Presentacion
             if(dtpFecha.Value < DateTime.Today)
             {
                 MessageBox.Show("Debe elegir la fecha a partir de hoy");
+                dtpFecha.Value = DateTime.Today;
             }
             else
             {
@@ -107,7 +110,8 @@ namespace ABM_CINE_FINAL.Presentacion
         {
             if(cboSala.SelectedIndex != -1)
             {
-                int nro_sala = Convert.ToInt32(cboSala.SelectedValue);
+                DataRowView sala = (DataRowView)cboSala.SelectedItem;
+                int nro_sala = Convert.ToInt32(sala[0]);
                 cboHorarios.Enabled = true;
                 CargarCombos(cboHorarios, HelperDAO.ObtenerInstancia().ObtenerHorariosDisponibles(nro_sala));
             }   
@@ -117,11 +121,30 @@ namespace ABM_CINE_FINAL.Presentacion
         {
             if (Verificar())
             {
-                funcion = new Funcion();
-                funcion.Id_peli_idio = Convert.ToInt32(cboIdiomas.SelectedValue);
-                funcion.Sala.Id = Convert.ToInt32(cboSala.SelectedValue);
-                funcion.Fecha = dtpFecha.Value;
-                funcion.Horario.Id = Convert.ToInt32(cboHorarios.SelectedValue);
+                DataRowView hora = (DataRowView)cboHorarios.SelectedItem;
+                int id_horario = Convert.ToInt32(hora[0]);
+
+				DataRowView peli = (DataRowView)cboPeliculas.SelectedItem;
+				int id_peli = Convert.ToInt32(peli[0]);
+
+                DataRowView idio = (DataRowView)cboIdiomas.SelectedItem;
+                int id_idioma = Convert.ToInt32(idio[0]);
+
+				DataRowView sala = (DataRowView)cboSala.SelectedItem;
+				int nro_sala = Convert.ToInt32(sala[0]);
+
+                DateTime fecha = dtpFecha.Value;
+
+                int id_pxi = servicio.ObtenerIDPXI(id_peli, id_idioma);
+				Funcion funcion = new Funcion();
+                funcion.Id_peli_idio = id_pxi;
+                Sala sal = new Sala();
+                sal.Id = nro_sala;
+                funcion.Sala = sal;
+                funcion.Fecha = fecha;
+                Horario hor = new Horario();
+                hor.Id = id_horario;
+                funcion.Horario = hor;
 
                 if (HelperDAO.ObtenerInstancia().AltaFuncion(funcion))
                 {
@@ -133,10 +156,7 @@ namespace ABM_CINE_FINAL.Presentacion
                     MessageBox.Show("Ha ocurrido un error");
                 }
             }
-            
-
         }
-
 		private void cboIdiomas_SelectedIndexChanged(object sender, EventArgs e)
 		{
 

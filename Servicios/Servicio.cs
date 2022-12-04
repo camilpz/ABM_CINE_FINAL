@@ -12,7 +12,10 @@ namespace ABM_CINE_FINAL.Servicios
 	internal class Servicio
 	{
 		//HelperDAO hel = new HelperDAO();
-
+		public bool AltaComprobante(Comprobante comprobante)
+		{
+			return HelperDAO.ObtenerInstancia().AltaComprobante(comprobante);
+		}
 		public DataTable ObtenerTablasAux(int nroTabla)
 		{
 			return HelperDAO.ObtenerInstancia().ObtenerTablasAux(nroTabla);
@@ -36,6 +39,14 @@ namespace ABM_CINE_FINAL.Servicios
 		public bool EditarFuncion(Funcion funcion)
 		{
 			return HelperDAO.ObtenerInstancia().EditarFuncion(funcion);
+		}
+		public int ObtenerIDPXI(int id_pelicula, int id_idioma)
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerIDPXI(id_pelicula, id_idioma);
+		}
+		public int ObtenerUltimoComprobante()
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerUltimoComprobante();
 		}
 		public DataTable ObtenerFuncionesPeliculas()
 		{

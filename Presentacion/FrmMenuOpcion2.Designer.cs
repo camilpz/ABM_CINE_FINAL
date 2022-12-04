@@ -486,7 +486,7 @@
 			this.btnSalirFActual.ForeColor = System.Drawing.SystemColors.ControlDark;
 			this.btnSalirFActual.Image = global::ABM_CINE_FINAL.Properties.Resources.VolverIcono;
 			this.btnSalirFActual.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnSalirFActual.Location = new System.Drawing.Point(738, 10);
+			this.btnSalirFActual.Location = new System.Drawing.Point(843, 10);
 			this.btnSalirFActual.Name = "btnSalirFActual";
 			this.btnSalirFActual.Size = new System.Drawing.Size(197, 46);
 			this.btnSalirFActual.TabIndex = 0;

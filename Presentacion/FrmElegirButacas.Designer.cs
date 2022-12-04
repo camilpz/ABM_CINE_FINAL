@@ -33,11 +33,6 @@
 			this.cboSala = new System.Windows.Forms.ComboBox();
 			this.cboIdiomas = new System.Windows.Forms.ComboBox();
 			this.panelButacas = new System.Windows.Forms.Panel();
-			this.btnFiltrar = new System.Windows.Forms.Button();
-			this.cboHorarios = new System.Windows.Forms.ComboBox();
-			this.btnAceptar = new System.Windows.Forms.Button();
-			this.btnContinuar = new System.Windows.Forms.Button();
-			this.cboFechas = new System.Windows.Forms.ComboBox();
 			this.lblNro10 = new System.Windows.Forms.Label();
 			this.lblNro9 = new System.Windows.Forms.Label();
 			this.lblNro8 = new System.Windows.Forms.Label();
@@ -103,13 +98,20 @@
 			this.A3 = new System.Windows.Forms.CheckBox();
 			this.A2 = new System.Windows.Forms.CheckBox();
 			this.A1 = new System.Windows.Forms.CheckBox();
+			this.btnFiltrar = new System.Windows.Forms.Button();
+			this.cboHorarios = new System.Windows.Forms.ComboBox();
+			this.btnAceptar = new System.Windows.Forms.Button();
+			this.btnContinuar = new System.Windows.Forms.Button();
+			this.cboFechas = new System.Windows.Forms.ComboBox();
+			this.lblCantButacas = new System.Windows.Forms.Label();
+			this.lblCantFunciones = new System.Windows.Forms.Label();
 			this.panelButacas.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// cboPeliculas
 			// 
 			this.cboPeliculas.FormattingEnabled = true;
-			this.cboPeliculas.Location = new System.Drawing.Point(73, 55);
+			this.cboPeliculas.Location = new System.Drawing.Point(73, 29);
 			this.cboPeliculas.Name = "cboPeliculas";
 			this.cboPeliculas.Size = new System.Drawing.Size(269, 24);
 			this.cboPeliculas.TabIndex = 65;
@@ -119,7 +121,7 @@
 			// cboSala
 			// 
 			this.cboSala.FormattingEnabled = true;
-			this.cboSala.Location = new System.Drawing.Point(593, 55);
+			this.cboSala.Location = new System.Drawing.Point(593, 29);
 			this.cboSala.Name = "cboSala";
 			this.cboSala.Size = new System.Drawing.Size(134, 24);
 			this.cboSala.TabIndex = 66;
@@ -129,7 +131,7 @@
 			// cboIdiomas
 			// 
 			this.cboIdiomas.FormattingEnabled = true;
-			this.cboIdiomas.Location = new System.Drawing.Point(376, 55);
+			this.cboIdiomas.Location = new System.Drawing.Point(376, 29);
 			this.cboIdiomas.Name = "cboIdiomas";
 			this.cboIdiomas.Size = new System.Drawing.Size(184, 24);
 			this.cboIdiomas.TabIndex = 67;
@@ -203,73 +205,11 @@
 			this.panelButacas.Controls.Add(this.A3);
 			this.panelButacas.Controls.Add(this.A2);
 			this.panelButacas.Controls.Add(this.A1);
-			this.panelButacas.Location = new System.Drawing.Point(71, 160);
+			this.panelButacas.Enabled = false;
+			this.panelButacas.Location = new System.Drawing.Point(73, 115);
 			this.panelButacas.Name = "panelButacas";
-			this.panelButacas.Size = new System.Drawing.Size(915, 451);
+			this.panelButacas.Size = new System.Drawing.Size(913, 444);
 			this.panelButacas.TabIndex = 68;
-			// 
-			// btnFiltrar
-			// 
-			this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
-			this.btnFiltrar.FlatAppearance.BorderSize = 0;
-			this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnFiltrar.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnFiltrar.Location = new System.Drawing.Point(821, 55);
-			this.btnFiltrar.Name = "btnFiltrar";
-			this.btnFiltrar.Size = new System.Drawing.Size(92, 34);
-			this.btnFiltrar.TabIndex = 69;
-			this.btnFiltrar.Text = "Filtrar";
-			this.btnFiltrar.UseVisualStyleBackColor = false;
-			this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-			// 
-			// cboHorarios
-			// 
-			this.cboHorarios.FormattingEnabled = true;
-			this.cboHorarios.Location = new System.Drawing.Point(376, 111);
-			this.cboHorarios.Name = "cboHorarios";
-			this.cboHorarios.Size = new System.Drawing.Size(121, 24);
-			this.cboHorarios.TabIndex = 71;
-			this.cboHorarios.Text = "Horario";
-			// 
-			// btnAceptar
-			// 
-			this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
-			this.btnAceptar.FlatAppearance.BorderSize = 0;
-			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnAceptar.Location = new System.Drawing.Point(448, 631);
-			this.btnAceptar.Name = "btnAceptar";
-			this.btnAceptar.Size = new System.Drawing.Size(95, 35);
-			this.btnAceptar.TabIndex = 72;
-			this.btnAceptar.Text = "Aceptar";
-			this.btnAceptar.UseVisualStyleBackColor = false;
-			// 
-			// btnContinuar
-			// 
-			this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
-			this.btnContinuar.FlatAppearance.BorderSize = 0;
-			this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnContinuar.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnContinuar.Location = new System.Drawing.Point(551, 631);
-			this.btnContinuar.Name = "btnContinuar";
-			this.btnContinuar.Size = new System.Drawing.Size(95, 35);
-			this.btnContinuar.TabIndex = 73;
-			this.btnContinuar.Text = "Continuar";
-			this.btnContinuar.UseVisualStyleBackColor = false;
-			this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
-			// 
-			// cboFechas
-			// 
-			this.cboFechas.FormattingEnabled = true;
-			this.cboFechas.Location = new System.Drawing.Point(73, 111);
-			this.cboFechas.Name = "cboFechas";
-			this.cboFechas.Size = new System.Drawing.Size(268, 24);
-			this.cboFechas.TabIndex = 74;
-			this.cboFechas.Text = "Fecha";
-			this.cboFechas.SelectedIndexChanged += new System.EventHandler(this.cboFechas_SelectedIndexChanged);
 			// 
 			// lblNro10
 			// 
@@ -452,6 +392,7 @@
 			this.checkBox40.TabIndex = 179;
 			this.checkBox40.Tag = "50";
 			this.checkBox40.UseVisualStyleBackColor = true;
+			this.checkBox40.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox41
 			// 
@@ -469,6 +410,7 @@
 			this.checkBox41.TabIndex = 178;
 			this.checkBox41.Tag = "49";
 			this.checkBox41.UseVisualStyleBackColor = true;
+			this.checkBox41.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox42
 			// 
@@ -486,6 +428,7 @@
 			this.checkBox42.TabIndex = 177;
 			this.checkBox42.Tag = "48";
 			this.checkBox42.UseVisualStyleBackColor = true;
+			this.checkBox42.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox43
 			// 
@@ -503,6 +446,7 @@
 			this.checkBox43.TabIndex = 176;
 			this.checkBox43.Tag = "47";
 			this.checkBox43.UseVisualStyleBackColor = true;
+			this.checkBox43.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox44
 			// 
@@ -520,6 +464,7 @@
 			this.checkBox44.TabIndex = 175;
 			this.checkBox44.Tag = "46";
 			this.checkBox44.UseVisualStyleBackColor = true;
+			this.checkBox44.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox45
 			// 
@@ -537,6 +482,7 @@
 			this.checkBox45.TabIndex = 174;
 			this.checkBox45.Tag = "45";
 			this.checkBox45.UseVisualStyleBackColor = true;
+			this.checkBox45.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox46
 			// 
@@ -554,6 +500,7 @@
 			this.checkBox46.TabIndex = 173;
 			this.checkBox46.Tag = "44";
 			this.checkBox46.UseVisualStyleBackColor = true;
+			this.checkBox46.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox47
 			// 
@@ -571,6 +518,7 @@
 			this.checkBox47.TabIndex = 172;
 			this.checkBox47.Tag = "43";
 			this.checkBox47.UseVisualStyleBackColor = true;
+			this.checkBox47.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox48
 			// 
@@ -588,6 +536,7 @@
 			this.checkBox48.TabIndex = 171;
 			this.checkBox48.Tag = "42";
 			this.checkBox48.UseVisualStyleBackColor = true;
+			this.checkBox48.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox49
 			// 
@@ -605,6 +554,7 @@
 			this.checkBox49.TabIndex = 170;
 			this.checkBox49.Tag = "41";
 			this.checkBox49.UseVisualStyleBackColor = true;
+			this.checkBox49.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox30
 			// 
@@ -622,6 +572,7 @@
 			this.checkBox30.TabIndex = 169;
 			this.checkBox30.Tag = "40";
 			this.checkBox30.UseVisualStyleBackColor = true;
+			this.checkBox30.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox31
 			// 
@@ -639,6 +590,7 @@
 			this.checkBox31.TabIndex = 168;
 			this.checkBox31.Tag = "39";
 			this.checkBox31.UseVisualStyleBackColor = true;
+			this.checkBox31.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox32
 			// 
@@ -656,6 +608,7 @@
 			this.checkBox32.TabIndex = 167;
 			this.checkBox32.Tag = "38";
 			this.checkBox32.UseVisualStyleBackColor = true;
+			this.checkBox32.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox33
 			// 
@@ -673,6 +626,7 @@
 			this.checkBox33.TabIndex = 166;
 			this.checkBox33.Tag = "37";
 			this.checkBox33.UseVisualStyleBackColor = true;
+			this.checkBox33.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox34
 			// 
@@ -690,6 +644,7 @@
 			this.checkBox34.TabIndex = 165;
 			this.checkBox34.Tag = "36";
 			this.checkBox34.UseVisualStyleBackColor = true;
+			this.checkBox34.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox35
 			// 
@@ -707,6 +662,7 @@
 			this.checkBox35.TabIndex = 164;
 			this.checkBox35.Tag = "35";
 			this.checkBox35.UseVisualStyleBackColor = true;
+			this.checkBox35.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox36
 			// 
@@ -724,6 +680,7 @@
 			this.checkBox36.TabIndex = 163;
 			this.checkBox36.Tag = "34";
 			this.checkBox36.UseVisualStyleBackColor = true;
+			this.checkBox36.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox37
 			// 
@@ -741,6 +698,7 @@
 			this.checkBox37.TabIndex = 162;
 			this.checkBox37.Tag = "33";
 			this.checkBox37.UseVisualStyleBackColor = true;
+			this.checkBox37.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox38
 			// 
@@ -758,6 +716,7 @@
 			this.checkBox38.TabIndex = 161;
 			this.checkBox38.Tag = "32";
 			this.checkBox38.UseVisualStyleBackColor = true;
+			this.checkBox38.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox39
 			// 
@@ -775,6 +734,7 @@
 			this.checkBox39.TabIndex = 160;
 			this.checkBox39.Tag = "31";
 			this.checkBox39.UseVisualStyleBackColor = true;
+			this.checkBox39.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox20
 			// 
@@ -792,6 +752,7 @@
 			this.checkBox20.TabIndex = 159;
 			this.checkBox20.Tag = "30";
 			this.checkBox20.UseVisualStyleBackColor = true;
+			this.checkBox20.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox21
 			// 
@@ -809,6 +770,7 @@
 			this.checkBox21.TabIndex = 158;
 			this.checkBox21.Tag = "29";
 			this.checkBox21.UseVisualStyleBackColor = true;
+			this.checkBox21.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox22
 			// 
@@ -826,6 +788,7 @@
 			this.checkBox22.TabIndex = 157;
 			this.checkBox22.Tag = "28";
 			this.checkBox22.UseVisualStyleBackColor = true;
+			this.checkBox22.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox23
 			// 
@@ -843,6 +806,7 @@
 			this.checkBox23.TabIndex = 156;
 			this.checkBox23.Tag = "27";
 			this.checkBox23.UseVisualStyleBackColor = true;
+			this.checkBox23.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox24
 			// 
@@ -860,6 +824,7 @@
 			this.checkBox24.TabIndex = 155;
 			this.checkBox24.Tag = "26";
 			this.checkBox24.UseVisualStyleBackColor = true;
+			this.checkBox24.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox25
 			// 
@@ -877,6 +842,7 @@
 			this.checkBox25.TabIndex = 154;
 			this.checkBox25.Tag = "25";
 			this.checkBox25.UseVisualStyleBackColor = true;
+			this.checkBox25.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox26
 			// 
@@ -894,6 +860,7 @@
 			this.checkBox26.TabIndex = 153;
 			this.checkBox26.Tag = "24";
 			this.checkBox26.UseVisualStyleBackColor = true;
+			this.checkBox26.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox27
 			// 
@@ -911,6 +878,7 @@
 			this.checkBox27.TabIndex = 152;
 			this.checkBox27.Tag = "23";
 			this.checkBox27.UseVisualStyleBackColor = true;
+			this.checkBox27.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox28
 			// 
@@ -928,6 +896,7 @@
 			this.checkBox28.TabIndex = 151;
 			this.checkBox28.Tag = "22";
 			this.checkBox28.UseVisualStyleBackColor = true;
+			this.checkBox28.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox29
 			// 
@@ -945,6 +914,7 @@
 			this.checkBox29.TabIndex = 150;
 			this.checkBox29.Tag = "21";
 			this.checkBox29.UseVisualStyleBackColor = true;
+			this.checkBox29.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox10
 			// 
@@ -962,6 +932,7 @@
 			this.checkBox10.TabIndex = 149;
 			this.checkBox10.Tag = "20";
 			this.checkBox10.UseVisualStyleBackColor = true;
+			this.checkBox10.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox11
 			// 
@@ -979,6 +950,7 @@
 			this.checkBox11.TabIndex = 148;
 			this.checkBox11.Tag = "19";
 			this.checkBox11.UseVisualStyleBackColor = true;
+			this.checkBox11.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox12
 			// 
@@ -996,6 +968,7 @@
 			this.checkBox12.TabIndex = 147;
 			this.checkBox12.Tag = "18";
 			this.checkBox12.UseVisualStyleBackColor = true;
+			this.checkBox12.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox13
 			// 
@@ -1013,6 +986,7 @@
 			this.checkBox13.TabIndex = 146;
 			this.checkBox13.Tag = "17";
 			this.checkBox13.UseVisualStyleBackColor = true;
+			this.checkBox13.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox14
 			// 
@@ -1030,6 +1004,7 @@
 			this.checkBox14.TabIndex = 145;
 			this.checkBox14.Tag = "16";
 			this.checkBox14.UseVisualStyleBackColor = true;
+			this.checkBox14.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox15
 			// 
@@ -1047,6 +1022,7 @@
 			this.checkBox15.TabIndex = 144;
 			this.checkBox15.Tag = "15";
 			this.checkBox15.UseVisualStyleBackColor = true;
+			this.checkBox15.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox16
 			// 
@@ -1064,6 +1040,7 @@
 			this.checkBox16.TabIndex = 143;
 			this.checkBox16.Tag = "14";
 			this.checkBox16.UseVisualStyleBackColor = true;
+			this.checkBox16.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox17
 			// 
@@ -1081,6 +1058,7 @@
 			this.checkBox17.TabIndex = 142;
 			this.checkBox17.Tag = "13";
 			this.checkBox17.UseVisualStyleBackColor = true;
+			this.checkBox17.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox18
 			// 
@@ -1098,6 +1076,7 @@
 			this.checkBox18.TabIndex = 141;
 			this.checkBox18.Tag = "12";
 			this.checkBox18.UseVisualStyleBackColor = true;
+			this.checkBox18.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// checkBox19
 			// 
@@ -1115,6 +1094,7 @@
 			this.checkBox19.TabIndex = 140;
 			this.checkBox19.Tag = "11";
 			this.checkBox19.UseVisualStyleBackColor = true;
+			this.checkBox19.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A10
 			// 
@@ -1132,6 +1112,7 @@
 			this.A10.TabIndex = 139;
 			this.A10.Tag = "10";
 			this.A10.UseVisualStyleBackColor = true;
+			this.A10.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A9
 			// 
@@ -1149,6 +1130,7 @@
 			this.A9.TabIndex = 138;
 			this.A9.Tag = "9";
 			this.A9.UseVisualStyleBackColor = true;
+			this.A9.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A8
 			// 
@@ -1166,6 +1148,7 @@
 			this.A8.TabIndex = 137;
 			this.A8.Tag = "8";
 			this.A8.UseVisualStyleBackColor = true;
+			this.A8.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A7
 			// 
@@ -1183,6 +1166,7 @@
 			this.A7.TabIndex = 136;
 			this.A7.Tag = "7";
 			this.A7.UseVisualStyleBackColor = true;
+			this.A7.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A6
 			// 
@@ -1200,6 +1184,7 @@
 			this.A6.TabIndex = 135;
 			this.A6.Tag = "6";
 			this.A6.UseVisualStyleBackColor = true;
+			this.A6.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A5
 			// 
@@ -1217,6 +1202,7 @@
 			this.A5.TabIndex = 134;
 			this.A5.Tag = "5";
 			this.A5.UseVisualStyleBackColor = true;
+			this.A5.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A4
 			// 
@@ -1234,6 +1220,7 @@
 			this.A4.TabIndex = 133;
 			this.A4.Tag = "4";
 			this.A4.UseVisualStyleBackColor = true;
+			this.A4.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A3
 			// 
@@ -1251,6 +1238,7 @@
 			this.A3.TabIndex = 132;
 			this.A3.Tag = "3";
 			this.A3.UseVisualStyleBackColor = true;
+			this.A3.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A2
 			// 
@@ -1268,6 +1256,7 @@
 			this.A2.TabIndex = 131;
 			this.A2.Tag = "2";
 			this.A2.UseVisualStyleBackColor = true;
+			this.A2.Click += new System.EventHandler(this.Click_Butaca);
 			// 
 			// A1
 			// 
@@ -1285,13 +1274,102 @@
 			this.A1.TabIndex = 130;
 			this.A1.Tag = "1";
 			this.A1.UseVisualStyleBackColor = true;
+			this.A1.Click += new System.EventHandler(this.Click_Butaca);
+			// 
+			// btnFiltrar
+			// 
+			this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnFiltrar.FlatAppearance.BorderSize = 0;
+			this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnFiltrar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnFiltrar.Location = new System.Drawing.Point(823, 29);
+			this.btnFiltrar.Name = "btnFiltrar";
+			this.btnFiltrar.Size = new System.Drawing.Size(104, 34);
+			this.btnFiltrar.TabIndex = 69;
+			this.btnFiltrar.Text = "Filtrar";
+			this.btnFiltrar.UseVisualStyleBackColor = false;
+			this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+			// 
+			// cboHorarios
+			// 
+			this.cboHorarios.FormattingEnabled = true;
+			this.cboHorarios.Location = new System.Drawing.Point(376, 85);
+			this.cboHorarios.Name = "cboHorarios";
+			this.cboHorarios.Size = new System.Drawing.Size(121, 24);
+			this.cboHorarios.TabIndex = 71;
+			this.cboHorarios.Text = "Horario";
+			// 
+			// btnAceptar
+			// 
+			this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnAceptar.FlatAppearance.BorderSize = 0;
+			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnAceptar.Location = new System.Drawing.Point(788, 586);
+			this.btnAceptar.Name = "btnAceptar";
+			this.btnAceptar.Size = new System.Drawing.Size(95, 35);
+			this.btnAceptar.TabIndex = 72;
+			this.btnAceptar.Text = "Aceptar";
+			this.btnAceptar.UseVisualStyleBackColor = false;
+			this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+			// 
+			// btnContinuar
+			// 
+			this.btnContinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnContinuar.FlatAppearance.BorderSize = 0;
+			this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnContinuar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnContinuar.Location = new System.Drawing.Point(891, 586);
+			this.btnContinuar.Name = "btnContinuar";
+			this.btnContinuar.Size = new System.Drawing.Size(95, 35);
+			this.btnContinuar.TabIndex = 73;
+			this.btnContinuar.Text = "Continuar";
+			this.btnContinuar.UseVisualStyleBackColor = false;
+			this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
+			// 
+			// cboFechas
+			// 
+			this.cboFechas.FormattingEnabled = true;
+			this.cboFechas.Location = new System.Drawing.Point(73, 85);
+			this.cboFechas.Name = "cboFechas";
+			this.cboFechas.Size = new System.Drawing.Size(268, 24);
+			this.cboFechas.TabIndex = 74;
+			this.cboFechas.Text = "Fecha";
+			this.cboFechas.SelectedIndexChanged += new System.EventHandler(this.cboFechas_SelectedIndexChanged);
+			// 
+			// lblCantButacas
+			// 
+			this.lblCantButacas.AutoSize = true;
+			this.lblCantButacas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCantButacas.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblCantButacas.Location = new System.Drawing.Point(86, 575);
+			this.lblCantButacas.Name = "lblCantButacas";
+			this.lblCantButacas.Size = new System.Drawing.Size(279, 20);
+			this.lblCantButacas.TabIndex = 75;
+			this.lblCantButacas.Text = "Cantidad de butacas seleccionadas:";
+			// 
+			// lblCantFunciones
+			// 
+			this.lblCantFunciones.AutoSize = true;
+			this.lblCantFunciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCantFunciones.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.lblCantFunciones.Location = new System.Drawing.Point(86, 601);
+			this.lblCantFunciones.Name = "lblCantFunciones";
+			this.lblCantFunciones.Size = new System.Drawing.Size(208, 20);
+			this.lblCantFunciones.TabIndex = 76;
+			this.lblCantFunciones.Text = "Funciones seleccionadas: ";
 			// 
 			// FrmElegirButacas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
-			this.ClientSize = new System.Drawing.Size(1064, 706);
+			this.ClientSize = new System.Drawing.Size(1051, 684);
+			this.Controls.Add(this.lblCantFunciones);
+			this.Controls.Add(this.lblCantButacas);
 			this.Controls.Add(this.cboFechas);
 			this.Controls.Add(this.btnContinuar);
 			this.Controls.Add(this.btnAceptar);
@@ -1308,6 +1386,7 @@
 			this.panelButacas.ResumeLayout(false);
 			this.panelButacas.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -1386,5 +1465,7 @@
 		private System.Windows.Forms.CheckBox A3;
 		private System.Windows.Forms.CheckBox A2;
 		private System.Windows.Forms.CheckBox A1;
+		private System.Windows.Forms.Label lblCantButacas;
+		private System.Windows.Forms.Label lblCantFunciones;
 	}
 }
