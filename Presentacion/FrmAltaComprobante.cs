@@ -87,7 +87,7 @@ namespace ABM_CINE_FINAL.Presentacion
 					}
 					else
 					{
-						MessageBox.Show("No se puede aplicar el descuento, las entradas no son pares");
+						//MessageBox.Show("No se puede aplicar el descuento, las entradas no son pares");
 						total += det.CalcularTotal();
 					}
 				}

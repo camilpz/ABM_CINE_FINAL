@@ -96,5 +96,15 @@ namespace ABM_CINE_FINAL.Presentacion
                 
             }
         }
-    }
+
+		private void rbtInactiva_CheckedChanged(object sender, EventArgs e)
+		{
+            dgvPeliculas.Rows.Clear();
+		}
+
+		private void rbtActiva_CheckedChanged(object sender, EventArgs e)
+		{
+            dgvPeliculas.Rows.Clear();
+		}
+	}
 }

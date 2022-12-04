@@ -99,6 +99,7 @@
 			this.rbtActiva.TabStop = true;
 			this.rbtActiva.Text = "Activa";
 			this.rbtActiva.UseVisualStyleBackColor = true;
+			this.rbtActiva.CheckedChanged += new System.EventHandler(this.rbtActiva_CheckedChanged);
 			// 
 			// rbtInactiva
 			// 
@@ -112,6 +113,7 @@
 			this.rbtInactiva.TabStop = true;
 			this.rbtInactiva.Text = "Inactiva";
 			this.rbtInactiva.UseVisualStyleBackColor = true;
+			this.rbtInactiva.CheckedChanged += new System.EventHandler(this.rbtInactiva_CheckedChanged);
 			// 
 			// dgvPeliculas
 			// 
