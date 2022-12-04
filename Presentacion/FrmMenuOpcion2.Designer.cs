@@ -30,44 +30,44 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuOpcion2));
 			this.panelPrincipal = new System.Windows.Forms.Panel();
+			this.btnSalir = new System.Windows.Forms.Button();
 			this.panelSubmenuReportes = new System.Windows.Forms.Panel();
 			this.button4 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
-			this.panelSubmenuBaja = new System.Windows.Forms.Panel();
-			this.panelSubmenuEditar = new System.Windows.Forms.Panel();
-			this.panelSubmenuNuevo = new System.Windows.Forms.Panel();
-			this.panelLogo = new System.Windows.Forms.Panel();
-			this.panelContenedor = new System.Windows.Forms.Panel();
-			this.panelSalida = new System.Windows.Forms.Panel();
-			this.btnSalirFActual = new System.Windows.Forms.Button();
-			this.PictureLogo = new System.Windows.Forms.PictureBox();
-			this.btnSalir = new System.Windows.Forms.Button();
 			this.btnReportes = new System.Windows.Forms.Button();
+			this.panelSubmenuBaja = new System.Windows.Forms.Panel();
 			this.btnBajaPelicula = new System.Windows.Forms.Button();
 			this.btnBajaFuncion = new System.Windows.Forms.Button();
 			this.btnBajaComprobante = new System.Windows.Forms.Button();
 			this.btnAcciones = new System.Windows.Forms.Button();
+			this.panelSubmenuEditar = new System.Windows.Forms.Panel();
 			this.bntEditarFuncion = new System.Windows.Forms.Button();
 			this.btnEditar = new System.Windows.Forms.Button();
+			this.panelSubmenuNuevo = new System.Windows.Forms.Panel();
 			this.btnPelícula = new System.Windows.Forms.Button();
 			this.btnFuncion = new System.Windows.Forms.Button();
 			this.btnComprobante = new System.Windows.Forms.Button();
 			this.btnNuevo = new System.Windows.Forms.Button();
+			this.panelLogo = new System.Windows.Forms.Panel();
 			this.pictureUsuario = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.panelContenedor = new System.Windows.Forms.Panel();
+			this.panelSalida = new System.Windows.Forms.Panel();
+			this.btnSalirFActual = new System.Windows.Forms.Button();
+			this.PictureLogo = new System.Windows.Forms.PictureBox();
 			this.panelPrincipal.SuspendLayout();
 			this.panelSubmenuReportes.SuspendLayout();
 			this.panelSubmenuBaja.SuspendLayout();
 			this.panelSubmenuEditar.SuspendLayout();
 			this.panelSubmenuNuevo.SuspendLayout();
 			this.panelLogo.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panelContenedor.SuspendLayout();
 			this.panelSalida.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panelPrincipal
@@ -87,8 +87,27 @@
 			this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
 			this.panelPrincipal.Name = "panelPrincipal";
-			this.panelPrincipal.Size = new System.Drawing.Size(256, 636);
+			this.panelPrincipal.Size = new System.Drawing.Size(256, 706);
 			this.panelPrincipal.TabIndex = 0;
+			// 
+			// btnSalir
+			// 
+			this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnSalir.FlatAppearance.BorderSize = 0;
+			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnSalir.Image = global::ABM_CINE_FINAL.Properties.Resources.SalirIcono;
+			this.btnSalir.Location = new System.Drawing.Point(0, 853);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.btnSalir.Size = new System.Drawing.Size(235, 40);
+			this.btnSalir.TabIndex = 11;
+			this.btnSalir.Text = "SALIR";
+			this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnSalir.UseVisualStyleBackColor = false;
+			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
 			// 
 			// panelSubmenuReportes
 			// 
@@ -166,118 +185,6 @@
 			this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.button1.UseVisualStyleBackColor = true;
 			// 
-			// panelSubmenuBaja
-			// 
-			this.panelSubmenuBaja.Controls.Add(this.btnBajaPelicula);
-			this.panelSubmenuBaja.Controls.Add(this.btnBajaFuncion);
-			this.panelSubmenuBaja.Controls.Add(this.btnBajaComprobante);
-			this.panelSubmenuBaja.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panelSubmenuBaja.Location = new System.Drawing.Point(0, 455);
-			this.panelSubmenuBaja.Name = "panelSubmenuBaja";
-			this.panelSubmenuBaja.Size = new System.Drawing.Size(235, 135);
-			this.panelSubmenuBaja.TabIndex = 8;
-			// 
-			// panelSubmenuEditar
-			// 
-			this.panelSubmenuEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(4)))), ((int)(((byte)(79)))));
-			this.panelSubmenuEditar.Controls.Add(this.bntEditarFuncion);
-			this.panelSubmenuEditar.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panelSubmenuEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.panelSubmenuEditar.Location = new System.Drawing.Point(0, 358);
-			this.panelSubmenuEditar.Name = "panelSubmenuEditar";
-			this.panelSubmenuEditar.Size = new System.Drawing.Size(235, 52);
-			this.panelSubmenuEditar.TabIndex = 6;
-			// 
-			// panelSubmenuNuevo
-			// 
-			this.panelSubmenuNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(4)))), ((int)(((byte)(79)))));
-			this.panelSubmenuNuevo.Controls.Add(this.btnPelícula);
-			this.panelSubmenuNuevo.Controls.Add(this.btnFuncion);
-			this.panelSubmenuNuevo.Controls.Add(this.btnComprobante);
-			this.panelSubmenuNuevo.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panelSubmenuNuevo.Location = new System.Drawing.Point(0, 184);
-			this.panelSubmenuNuevo.Name = "panelSubmenuNuevo";
-			this.panelSubmenuNuevo.Size = new System.Drawing.Size(235, 129);
-			this.panelSubmenuNuevo.TabIndex = 4;
-			// 
-			// panelLogo
-			// 
-			this.panelLogo.Controls.Add(this.pictureUsuario);
-			this.panelLogo.Controls.Add(this.pictureBox1);
-			this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panelLogo.Location = new System.Drawing.Point(0, 0);
-			this.panelLogo.Name = "panelLogo";
-			this.panelLogo.Size = new System.Drawing.Size(235, 139);
-			this.panelLogo.TabIndex = 0;
-			// 
-			// panelContenedor
-			// 
-			this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
-			this.panelContenedor.Controls.Add(this.panelSalida);
-			this.panelContenedor.Controls.Add(this.PictureLogo);
-			this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panelContenedor.Location = new System.Drawing.Point(256, 0);
-			this.panelContenedor.Name = "panelContenedor";
-			this.panelContenedor.Size = new System.Drawing.Size(947, 636);
-			this.panelContenedor.TabIndex = 1;
-			// 
-			// panelSalida
-			// 
-			this.panelSalida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(19)))), ((int)(((byte)(84)))));
-			this.panelSalida.Controls.Add(this.btnSalirFActual);
-			this.panelSalida.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panelSalida.Location = new System.Drawing.Point(0, 568);
-			this.panelSalida.Name = "panelSalida";
-			this.panelSalida.Size = new System.Drawing.Size(947, 68);
-			this.panelSalida.TabIndex = 1;
-			// 
-			// btnSalirFActual
-			// 
-			this.btnSalirFActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
-			this.btnSalirFActual.FlatAppearance.BorderSize = 0;
-			this.btnSalirFActual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSalirFActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSalirFActual.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnSalirFActual.Image = global::ABM_CINE_FINAL.Properties.Resources.VolverIcono;
-			this.btnSalirFActual.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnSalirFActual.Location = new System.Drawing.Point(738, 10);
-			this.btnSalirFActual.Name = "btnSalirFActual";
-			this.btnSalirFActual.Size = new System.Drawing.Size(197, 46);
-			this.btnSalirFActual.TabIndex = 0;
-			this.btnSalirFActual.Text = "Volver al menú ";
-			this.btnSalirFActual.UseVisualStyleBackColor = false;
-			this.btnSalirFActual.Click += new System.EventHandler(this.btnSalirFActual_Click);
-			// 
-			// PictureLogo
-			// 
-			this.PictureLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.PictureLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureLogo.Image")));
-			this.PictureLogo.Location = new System.Drawing.Point(291, 115);
-			this.PictureLogo.Name = "PictureLogo";
-			this.PictureLogo.Size = new System.Drawing.Size(343, 340);
-			this.PictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.PictureLogo.TabIndex = 0;
-			this.PictureLogo.TabStop = false;
-			// 
-			// btnSalir
-			// 
-			this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
-			this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnSalir.FlatAppearance.BorderSize = 0;
-			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSalir.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.btnSalir.Image = global::ABM_CINE_FINAL.Properties.Resources.SalirIcono;
-			this.btnSalir.Location = new System.Drawing.Point(0, 853);
-			this.btnSalir.Name = "btnSalir";
-			this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.btnSalir.Size = new System.Drawing.Size(235, 40);
-			this.btnSalir.TabIndex = 11;
-			this.btnSalir.Text = "SALIR";
-			this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnSalir.UseVisualStyleBackColor = false;
-			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-			// 
 			// btnReportes
 			// 
 			this.btnReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
@@ -296,6 +203,17 @@
 			this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnReportes.UseVisualStyleBackColor = false;
 			this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
+			// 
+			// panelSubmenuBaja
+			// 
+			this.panelSubmenuBaja.Controls.Add(this.btnBajaPelicula);
+			this.panelSubmenuBaja.Controls.Add(this.btnBajaFuncion);
+			this.panelSubmenuBaja.Controls.Add(this.btnBajaComprobante);
+			this.panelSubmenuBaja.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panelSubmenuBaja.Location = new System.Drawing.Point(0, 455);
+			this.panelSubmenuBaja.Name = "panelSubmenuBaja";
+			this.panelSubmenuBaja.Size = new System.Drawing.Size(235, 135);
+			this.panelSubmenuBaja.TabIndex = 8;
 			// 
 			// btnBajaPelicula
 			// 
@@ -374,6 +292,17 @@
 			this.btnAcciones.UseVisualStyleBackColor = false;
 			this.btnAcciones.Click += new System.EventHandler(this.btnAcciones_Click);
 			// 
+			// panelSubmenuEditar
+			// 
+			this.panelSubmenuEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(4)))), ((int)(((byte)(79)))));
+			this.panelSubmenuEditar.Controls.Add(this.bntEditarFuncion);
+			this.panelSubmenuEditar.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panelSubmenuEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.panelSubmenuEditar.Location = new System.Drawing.Point(0, 358);
+			this.panelSubmenuEditar.Name = "panelSubmenuEditar";
+			this.panelSubmenuEditar.Size = new System.Drawing.Size(235, 52);
+			this.panelSubmenuEditar.TabIndex = 6;
+			// 
 			// bntEditarFuncion
 			// 
 			this.bntEditarFuncion.Dock = System.Windows.Forms.DockStyle.Top;
@@ -409,6 +338,18 @@
 			this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnEditar.UseVisualStyleBackColor = false;
 			this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+			// 
+			// panelSubmenuNuevo
+			// 
+			this.panelSubmenuNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(4)))), ((int)(((byte)(79)))));
+			this.panelSubmenuNuevo.Controls.Add(this.btnPelícula);
+			this.panelSubmenuNuevo.Controls.Add(this.btnFuncion);
+			this.panelSubmenuNuevo.Controls.Add(this.btnComprobante);
+			this.panelSubmenuNuevo.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panelSubmenuNuevo.Location = new System.Drawing.Point(0, 184);
+			this.panelSubmenuNuevo.Name = "panelSubmenuNuevo";
+			this.panelSubmenuNuevo.Size = new System.Drawing.Size(235, 129);
+			this.panelSubmenuNuevo.TabIndex = 4;
 			// 
 			// btnPelícula
 			// 
@@ -486,6 +427,16 @@
 			this.btnNuevo.UseVisualStyleBackColor = false;
 			this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
 			// 
+			// panelLogo
+			// 
+			this.panelLogo.Controls.Add(this.pictureUsuario);
+			this.panelLogo.Controls.Add(this.pictureBox1);
+			this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panelLogo.Location = new System.Drawing.Point(0, 0);
+			this.panelLogo.Name = "panelLogo";
+			this.panelLogo.Size = new System.Drawing.Size(235, 139);
+			this.panelLogo.TabIndex = 0;
+			// 
 			// pictureUsuario
 			// 
 			this.pictureUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureUsuario.Image")));
@@ -505,11 +456,60 @@
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
+			// panelContenedor
+			// 
+			this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
+			this.panelContenedor.Controls.Add(this.panelSalida);
+			this.panelContenedor.Controls.Add(this.PictureLogo);
+			this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelContenedor.Location = new System.Drawing.Point(256, 0);
+			this.panelContenedor.Name = "panelContenedor";
+			this.panelContenedor.Size = new System.Drawing.Size(1064, 706);
+			this.panelContenedor.TabIndex = 1;
+			// 
+			// panelSalida
+			// 
+			this.panelSalida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(19)))), ((int)(((byte)(84)))));
+			this.panelSalida.Controls.Add(this.btnSalirFActual);
+			this.panelSalida.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panelSalida.Location = new System.Drawing.Point(0, 638);
+			this.panelSalida.Name = "panelSalida";
+			this.panelSalida.Size = new System.Drawing.Size(1064, 68);
+			this.panelSalida.TabIndex = 1;
+			// 
+			// btnSalirFActual
+			// 
+			this.btnSalirFActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(3)))), ((int)(((byte)(36)))));
+			this.btnSalirFActual.FlatAppearance.BorderSize = 0;
+			this.btnSalirFActual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSalirFActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSalirFActual.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnSalirFActual.Image = global::ABM_CINE_FINAL.Properties.Resources.VolverIcono;
+			this.btnSalirFActual.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnSalirFActual.Location = new System.Drawing.Point(738, 10);
+			this.btnSalirFActual.Name = "btnSalirFActual";
+			this.btnSalirFActual.Size = new System.Drawing.Size(197, 46);
+			this.btnSalirFActual.TabIndex = 0;
+			this.btnSalirFActual.Text = "Volver al menú ";
+			this.btnSalirFActual.UseVisualStyleBackColor = false;
+			this.btnSalirFActual.Click += new System.EventHandler(this.btnSalirFActual_Click);
+			// 
+			// PictureLogo
+			// 
+			this.PictureLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.PictureLogo.Image = global::ABM_CINE_FINAL.Properties.Resources.Logo_Cinema;
+			this.PictureLogo.Location = new System.Drawing.Point(350, 150);
+			this.PictureLogo.Name = "PictureLogo";
+			this.PictureLogo.Size = new System.Drawing.Size(343, 340);
+			this.PictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.PictureLogo.TabIndex = 0;
+			this.PictureLogo.TabStop = false;
+			// 
 			// FrmMenuOpcion2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1203, 636);
+			this.ClientSize = new System.Drawing.Size(1320, 706);
 			this.Controls.Add(this.panelContenedor);
 			this.Controls.Add(this.panelPrincipal);
 			this.MinimumSize = new System.Drawing.Size(1221, 683);
@@ -522,12 +522,12 @@
 			this.panelSubmenuEditar.ResumeLayout(false);
 			this.panelSubmenuNuevo.ResumeLayout(false);
 			this.panelLogo.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.panelContenedor.ResumeLayout(false);
 			this.panelContenedor.PerformLayout();
 			this.panelSalida.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureUsuario)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}

@@ -118,12 +118,6 @@
     <Compile Include="Presentacion\FrmElegirButacas.Designer.cs">
       <DependentUpon>FrmElegirButacas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\FrmMenu.Designer.cs">
-      <DependentUpon>FrmMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\FrmMenuOpcion2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,9 +153,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmElegirButacas.resx">
       <DependentUpon>FrmElegirButacas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmMenu.resx">
-      <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmMenuOpcion2.resx">
       <DependentUpon>FrmMenuOpcion2.cs</DependentUpon>
@@ -263,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ButacaOcupada64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButacaIcono64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

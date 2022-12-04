@@ -37,5 +37,34 @@ namespace ABM_CINE_FINAL.Servicios
 		{
 			return HelperDAO.ObtenerInstancia().EditarFuncion(funcion);
 		}
+		public DataTable ObtenerFuncionesPeliculas()
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerFuncionesPeliculas();
+		}
+		public DataTable ObtenerFuncionesIdiomas(int id_pelicula)
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerFuncionesIdiomas(id_pelicula);
+		}
+		public DataTable ObtenerFuncionesSalas(int id_pelicula, int id_idioma)
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerFuncionesSalas(id_pelicula, id_idioma);
+		}
+		public DataTable ObtenerFuncionesFecha(int id_pelicula, int id_idioma, int id_sala)
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerFuncionesFecha(id_pelicula, id_idioma, id_sala);
+		}
+		public DataTable ObtenerFuncionesHorario(int id_pelicula, int id_idioma, int id_sala, DateTime fecha)
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerFuncionesHorario(id_pelicula, id_idioma, id_sala, fecha);
+		}
+		public int ObtenerFuncionID(int id_pelicula, int id_idioma, int id_sala, int id_horario, DateTime fecha)
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerFuncionID(id_pelicula, id_idioma, id_sala, id_horario, fecha);
+
+		}
+		public DataTable ObtenerAsientosOcupadosFuncion(int id_funcion)
+		{
+			return HelperDAO.ObtenerInstancia().ObtenerAsientosOcupadosFuncion(id_funcion);
+		}
 	}
 }

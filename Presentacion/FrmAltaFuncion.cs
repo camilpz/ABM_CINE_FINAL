@@ -23,6 +23,7 @@ namespace ABM_CINE_FINAL.Presentacion
         private void FrmAltaFuncion_Load(object sender, EventArgs e)
         {
             Limpiar();
+            Inicializar(false);
             CargarCombos(cboPeliculas, HelperDAO.ObtenerInstancia().ObtenerPeliculasActivas());
         }
         public void CargarCombos(ComboBox cbo, DataTable tabla)
@@ -32,6 +33,12 @@ namespace ABM_CINE_FINAL.Presentacion
             cbo.DisplayMember = tabla.Columns[1].ColumnName;
             cbo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbo.SelectedIndex = -1;
+        }
+        public void Inicializar(bool x)
+        {
+            cboIdiomas.Enabled = x;
+            cboHorarios.Enabled = x;
+            cboSala.Enabled = x;
         }
         public void Limpiar()
         {
@@ -75,7 +82,7 @@ namespace ABM_CINE_FINAL.Presentacion
             if(cboPeliculas.SelectedIndex != -1)
             {
                 int id_peli = Convert.ToInt32(cboPeliculas.SelectedValue);
-
+                cboIdiomas.Enabled = true;
                 CargarCombos(cboIdiomas, HelperDAO.ObtenerInstancia().ObtenerIdiomasPeliculas(id_peli));
             }
             
@@ -90,6 +97,7 @@ namespace ABM_CINE_FINAL.Presentacion
             else
             {
                 DateTime fecha = dtpFecha.Value;
+                cboSala.Enabled = true;
                 CargarCombos(cboSala, HelperDAO.ObtenerInstancia().ObtenerSalasDesocupadas(fecha));
             }
             
@@ -100,7 +108,7 @@ namespace ABM_CINE_FINAL.Presentacion
             if(cboSala.SelectedIndex != -1)
             {
                 int nro_sala = Convert.ToInt32(cboSala.SelectedValue);
-
+                cboHorarios.Enabled = true;
                 CargarCombos(cboHorarios, HelperDAO.ObtenerInstancia().ObtenerHorariosDisponibles(nro_sala));
             }   
         }
@@ -128,5 +136,10 @@ namespace ABM_CINE_FINAL.Presentacion
             
 
         }
-    }
+
+		private void cboIdiomas_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

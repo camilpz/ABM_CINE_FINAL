@@ -105,6 +105,7 @@
 			this.cboIdiomas.Name = "cboIdiomas";
 			this.cboIdiomas.Size = new System.Drawing.Size(200, 24);
 			this.cboIdiomas.TabIndex = 5;
+			this.cboIdiomas.SelectedIndexChanged += new System.EventHandler(this.cboIdiomas_SelectedIndexChanged);
 			// 
 			// dtpFecha
 			// 

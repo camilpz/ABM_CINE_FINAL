@@ -73,6 +73,16 @@ namespace ABM_CINE_FINAL.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButacaIcono64 {
+            get {
+                object obj = ResourceManager.GetObject("ButacaIcono64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ButacaOcupada64 {
             get {
                 object obj = ResourceManager.GetObject("ButacaOcupada64", resourceCulture);

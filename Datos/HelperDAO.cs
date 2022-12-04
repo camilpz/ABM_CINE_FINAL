@@ -184,7 +184,94 @@ namespace ABM_CINE_FINAL.Datos
             return exito;
 		}
 		
-		public DataTable ObtenerFuncionesEditar()               //ARREGLAR (TIRA ERROR RARO)
+
+        public DataTable ObtenerFuncionesPeliculas()
+        {
+            DataTable table= new DataTable();
+            Conectar("SP_Reservas_Peliculas");
+            table.Load(comando.ExecuteReader());
+            cnn.Close();
+            return table;
+        }
+        public DataTable ObtenerFuncionesIdiomas(int id_pelicula)
+        {
+            DataTable tabla = new DataTable();
+            Conectar("SP_Reservas_Idiomas");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@id_peli", id_pelicula);
+            tabla.Load(comando.ExecuteReader());
+            cnn.Close();
+            return tabla;
+        }
+        public DataTable ObtenerFuncionesSalas(int id_pelicula, int id_idioma)
+        {
+            DataTable tabla = new DataTable();
+            Conectar("SP_Reservas_Salas");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@id_peli", id_pelicula);
+            comando.Parameters.AddWithValue("@id_idioma", id_idioma);
+            tabla.Load(comando.ExecuteReader());
+            cnn.Close();
+            return tabla;
+        }
+        public DataTable ObtenerFuncionesFecha(int id_pelicula, int id_idioma, int id_sala)
+        {
+            DataTable tabla = new DataTable();
+            Conectar("SP_Reservas_Fecha");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@id_sala", id_sala);
+			comando.Parameters.AddWithValue("@id_peli", id_pelicula);
+			comando.Parameters.AddWithValue("@id_idioma", id_idioma);
+            tabla.Load(comando.ExecuteReader());
+            cnn.Close();
+            return tabla;
+		}
+        public DataTable ObtenerFuncionesHorario(int id_pelicula, int id_idioma, int id_sala, DateTime fecha)
+        {
+            DataTable tabla = new DataTable();
+            Conectar("SP_Reservas_Horario");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@id_sala",id_sala);
+			comando.Parameters.AddWithValue("@id_peli",id_pelicula);
+			comando.Parameters.AddWithValue("@id_idioma",id_idioma);
+			comando.Parameters.AddWithValue("@fecha",fecha);
+            tabla.Load(comando.ExecuteReader());
+            cnn.Close();
+            return tabla;
+		}
+        public int ObtenerFuncionID(int id_pelicula, int id_idioma, int id_sala, int id_horario, DateTime fecha)
+        {
+            Conectar("SP_Obtener_Id_Funcion");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@id_sala", id_sala);
+			comando.Parameters.AddWithValue("@id_peli",id_pelicula);
+			comando.Parameters.AddWithValue("@id_idioma", id_idioma);
+			comando.Parameters.AddWithValue("@fecha", fecha);
+			comando.Parameters.AddWithValue("@id_horario", id_horario);
+            
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@id_funcion";
+            param.Direction = ParameterDirection.Output;
+            param.DbType = DbType.Int32;
+
+            comando.Parameters.Add(param);
+            comando.ExecuteNonQuery();
+
+            int id = (int)param.Value;
+            cnn.Close();
+            return id;
+        }
+        public DataTable ObtenerAsientosOcupadosFuncion(int id_funcion)
+        {
+            DataTable table= new DataTable();
+            Conectar("SP_Funciones_Butacas_Ocupadas");
+            comando.Parameters.Clear();
+            comando.Parameters.AddWithValue("@id_funcion", id_funcion);
+            table.Load(comando.ExecuteReader());
+            cnn.Close();
+            return table;
+        }
+        public DataTable ObtenerFuncionesEditar()               //ARREGLAR (TIRA ERROR RARO)
         {
             DataTable tabla = new DataTable();
             Conectar("SP_Vis_Funciones");

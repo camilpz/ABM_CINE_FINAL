@@ -76,6 +76,7 @@ namespace ABM_CINE_FINAL.Presentacion
 		private void btnComprobante_Click(object sender, EventArgs e)
 		{
 			//llamar a butacas, despues ir a la creación del comprobante
+			AbrirFormularios(new FrmElegirButacas());
 			OcultarSubmenu();
 		}
 
