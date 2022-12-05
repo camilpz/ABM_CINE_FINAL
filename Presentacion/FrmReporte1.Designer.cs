@@ -30,6 +30,7 @@
         {
             this.dgvReporte = new System.Windows.Forms.DataGridView();
             this.lblNombreReporte = new System.Windows.Forms.Label();
+            this.cboAño = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,12 +60,29 @@
             this.lblNombreReporte.TabIndex = 7;
             this.lblNombreReporte.Text = "Nombre Reporte";
             // 
+            // cboAño
+            // 
+            this.cboAño.FormattingEnabled = true;
+            this.cboAño.Items.AddRange(new object[] {
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
+            this.cboAño.Location = new System.Drawing.Point(21, 102);
+            this.cboAño.Margin = new System.Windows.Forms.Padding(2);
+            this.cboAño.Name = "cboAño";
+            this.cboAño.Size = new System.Drawing.Size(62, 21);
+            this.cboAño.TabIndex = 66;
+            this.cboAño.Text = "Año";
+            // 
             // FrmReporte1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(19)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(697, 495);
+            this.Controls.Add(this.cboAño);
             this.Controls.Add(this.lblNombreReporte);
             this.Controls.Add(this.dgvReporte);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -81,5 +99,6 @@
 
         private System.Windows.Forms.DataGridView dgvReporte;
         private System.Windows.Forms.Label lblNombreReporte;
+        private System.Windows.Forms.ComboBox cboAño;
     }
 }

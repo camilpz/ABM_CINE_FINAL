@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ABM_CINE_FINAL.Servicios;
-using ABM_CINE_FINAL.Dominio;
 using System.Windows.Media.Animation;
+using LibreriaCine.Clases;
+using LibreriaCine.Factory;
 
 namespace ABM_CINE_FINAL.Presentacion
 {
@@ -22,17 +22,7 @@ namespace ABM_CINE_FINAL.Presentacion
 			InitializeComponent();
 		}
 
-		private void FrmAltaComprobante_Load(object sender, EventArgs e)
-		{
-			lblComprobanteNro.Text = $"Comprobante Nro: {UltimoComprobante()}";
-			CargarCombos(cboFormasPago, 1);
-			CargarCombos(cboDescuentos, 5);
-			//CargarCombos(cboExtras, 9);
-			CargarGrilla();
-			lblSubtotal.Text = $"Subtotal $: {TotalSimple()}";
-			lblTotal.Text = $"Total $: {CalcularTotal()}";
-		}
-
+		//METODOS
 		public void CargarCombos(ComboBox combo, int nro_tabla) //ver valor en el SP
 		{
 			DataTable table = new DataTable();
@@ -43,10 +33,12 @@ namespace ABM_CINE_FINAL.Presentacion
 			combo.DropDownStyle = ComboBoxStyle.DropDownList;
 			combo.SelectedIndex = -1;
 		}
+		
 		public int UltimoComprobante()
 		{
 			return servicio.ObtenerUltimoComprobante();
 		}
+		
 		public void CargarGrilla()
 		{
 			foreach (Detalle det in Ldetalles)
@@ -54,6 +46,7 @@ namespace ABM_CINE_FINAL.Presentacion
 				dgvDetalles.Rows.Add(new object[] { det.Funcion.Pelicula.Nombre, det.Funcion.Sala.Id, det.Funcion.Sala.LisButacas.Count(), det.CalcularTotal()});
 			}
 		}
+		
 		public double TotalSimple()
 		{
 			double total = 0;
@@ -63,6 +56,7 @@ namespace ABM_CINE_FINAL.Presentacion
 			}
 			return total;
 		}
+		
 		public double CalcularTotal()
 		{
 
@@ -116,6 +110,7 @@ namespace ABM_CINE_FINAL.Presentacion
 			}
 			return total;
 		}
+		
 		public bool Verificar()
 		{
 			bool valido = true;
@@ -131,6 +126,22 @@ namespace ABM_CINE_FINAL.Presentacion
 			}
 			return valido;
 		}
+
+		//METODOS WEB API
+
+
+		//EVENTOS
+		private void FrmAltaComprobante_Load(object sender, EventArgs e)
+		{
+			lblComprobanteNro.Text = $"Comprobante Nro: {UltimoComprobante()}";
+			CargarCombos(cboFormasPago, 1);
+			CargarCombos(cboDescuentos, 5);
+			//CargarCombos(cboExtras, 9);
+			CargarGrilla();
+			lblSubtotal.Text = $"Subtotal $: {TotalSimple()}";
+			lblTotal.Text = $"Total $: {CalcularTotal()}";
+		}
+
 		private void cboDescuentos_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			if(cboDescuentos.SelectedIndex != -1)
@@ -196,5 +207,6 @@ namespace ABM_CINE_FINAL.Presentacion
 				lblSubtotal.Text = $"Subtotal: $ {TotalSimple()}";
 			}
 		}
+
 	}
 }

@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ABM_CINE_FINAL.Datos;
+using LibreriaCine.Clases;
+using LibreriaCine;
+using LibreriaCine.Factory;
 
 namespace ABM_CINE_FINAL.Presentacion
 {
     public partial class FrmBajaAltaFuncion : Form
     {
+        Servicio servicio = new Servicio();
         public FrmBajaAltaFuncion()
         {
             InitializeComponent();
@@ -25,7 +28,7 @@ namespace ABM_CINE_FINAL.Presentacion
         public void CargarGrilla(int eleccion)
         {
             DataTable tabla = new DataTable();
-            tabla = HelperDAO.ObtenerInstancia().ObtenerFunciones(eleccion);
+            tabla = servicio.ObtenerFunciones(eleccion);
             foreach (DataRow fila in tabla.Rows)
             {
                 dgvFunciones.Rows.Add(new object[] { fila["ID"], fila["Pelicula"], fila["Idioma"], fila["NroSala"], fila["Fecha"], fila["Horario"] });
@@ -63,7 +66,7 @@ namespace ABM_CINE_FINAL.Presentacion
             {
                 if (rbtAlta.Checked)
                 {
-                    if (HelperDAO.ObtenerInstancia().CambiarEstadoFuncion(Convert.ToInt32(dgvFunciones.CurrentRow.Cells["colID"].Value), 1)){
+                    if (servicio.CambiarEstadoFuncion(Convert.ToInt32(dgvFunciones.CurrentRow.Cells["colID"].Value), 1)){
                         dgvFunciones.Rows.RemoveAt(dgvFunciones.CurrentRow.Index);
                         MessageBox.Show("Se ha dado de baja exitosamente");
                     }
@@ -74,7 +77,7 @@ namespace ABM_CINE_FINAL.Presentacion
                 }
                 if (rbtBaja.Checked)
                 {
-                    if(HelperDAO.ObtenerInstancia().CambiarEstadoFuncion(Convert.ToInt32(dgvFunciones.CurrentRow.Cells["colID"].Value), 2))
+                    if(servicio.CambiarEstadoFuncion(Convert.ToInt32(dgvFunciones.CurrentRow.Cells["colID"].Value), 2))
                     {
                         dgvFunciones.Rows.RemoveAt(dgvFunciones.CurrentRow.Index);
                         MessageBox.Show("Se ha dado de alta exitosamente");

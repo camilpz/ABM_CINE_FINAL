@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ABM_CINE_FINAL.Datos;
+using LibreriaCine.Clases;
+using LibreriaCine.Factory;
 
 namespace ABM_CINE_FINAL.Presentacion
 {
     public partial class FrmAltaBajaPelicula : Form
     {
+        Servicio servicio = new Servicio();
         public FrmAltaBajaPelicula()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace ABM_CINE_FINAL.Presentacion
         public void CargarGrilla(string peli, int elec)
         {
             DataTable tabla = new DataTable();
-            tabla = HelperDAO.ObtenerInstancia().ObtenerPeliculasNombreEstado(peli, elec);
+            tabla = servicio.ObtenerPeliculasNombreEstado(peli, elec);
             foreach (DataRow fila in tabla.Rows)
             {
                 dgvPeliculas.Rows.Add(new object[] { fila["ID"], fila["Pelicula"], fila["Clasificacion"], fila["Duracion"] });
@@ -71,7 +73,7 @@ namespace ABM_CINE_FINAL.Presentacion
             {
                 if (rbtActiva.Checked)
                 {
-                    if (HelperDAO.ObtenerInstancia().CambiarEstadoPelicula(Convert.ToInt32(dgvPeliculas.CurrentRow.Cells["colId"].Value), 1))
+                    if (servicio.CambiarEstadoPelicula(Convert.ToInt32(dgvPeliculas.CurrentRow.Cells["colId"].Value), 1))
                     {
                         MessageBox.Show("Se ha dado de baja con éxito");
                         dgvPeliculas.Rows.RemoveAt(dgvPeliculas.CurrentRow.Index);
@@ -83,7 +85,7 @@ namespace ABM_CINE_FINAL.Presentacion
                 }
                 if (rbtInactiva.Checked)
                 {
-                    if (HelperDAO.ObtenerInstancia().CambiarEstadoPelicula(Convert.ToInt32(dgvPeliculas.CurrentRow.Cells["colId"].Value), 2))
+                    if (servicio.CambiarEstadoPelicula(Convert.ToInt32(dgvPeliculas.CurrentRow.Cells["colId"].Value), 2))
                     {
                         MessageBox.Show("Se ha dado de alta con éxito");
                         dgvPeliculas.Rows.RemoveAt(dgvPeliculas.CurrentRow.Index);

@@ -1,6 +1,4 @@
-﻿using ABM_CINE_FINAL.Dominio;
-using ABM_CINE_FINAL.Servicios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibreriaCine.Clases;
+using LibreriaCine.Factory;
 
 namespace ABM_CINE_FINAL.Presentacion
 {

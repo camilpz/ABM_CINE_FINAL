@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ABM_CINE_FINAL.Datos;
-using ABM_CINE_FINAL.Dominio;
-using ABM_CINE_FINAL.Servicios;
+using LibreriaCine.Clases;
+using LibreriaCine.Factory;
 
 namespace ABM_CINE_FINAL.Presentacion
 {
@@ -25,7 +24,7 @@ namespace ABM_CINE_FINAL.Presentacion
         {
             Limpiar();
             Inicializar(false);
-            CargarCombos(cboPeliculas, HelperDAO.ObtenerInstancia().ObtenerPeliculasActivas());
+            CargarCombos(cboPeliculas, servicio.ObtenerPeliculasActivas());
         }
         public void CargarCombos(ComboBox cbo, DataTable tabla)
         {
@@ -85,7 +84,7 @@ namespace ABM_CINE_FINAL.Presentacion
                 DataRowView peli = (DataRowView)cboPeliculas.SelectedItem;
                 int id_peli = Convert.ToInt32(peli[0]);
                 cboIdiomas.Enabled = true;
-                CargarCombos(cboIdiomas, HelperDAO.ObtenerInstancia().ObtenerIdiomasPeliculas(id_peli));
+                CargarCombos(cboIdiomas, servicio.ObtenerIdiomasPeliculas(id_peli));
             }
             
         }
@@ -101,7 +100,7 @@ namespace ABM_CINE_FINAL.Presentacion
             {
                 DateTime fecha = dtpFecha.Value;
                 cboSala.Enabled = true;
-                CargarCombos(cboSala, HelperDAO.ObtenerInstancia().ObtenerSalasDesocupadas(fecha));
+                CargarCombos(cboSala, servicio.ObtenerSalasDesocupadas(fecha));
             }
             
         }
@@ -113,7 +112,7 @@ namespace ABM_CINE_FINAL.Presentacion
                 DataRowView sala = (DataRowView)cboSala.SelectedItem;
                 int nro_sala = Convert.ToInt32(sala[0]);
                 cboHorarios.Enabled = true;
-                CargarCombos(cboHorarios, HelperDAO.ObtenerInstancia().ObtenerHorariosDisponibles(nro_sala));
+                CargarCombos(cboHorarios, servicio.ObtenerHorariosDisponibles(nro_sala));
             }   
         }
 
@@ -146,7 +145,7 @@ namespace ABM_CINE_FINAL.Presentacion
                 hor.Id = id_horario;
                 funcion.Horario = hor;
 
-                if (HelperDAO.ObtenerInstancia().AltaFuncion(funcion))
+                if (servicio.AltaFuncion(funcion))
                 {
                     MessageBox.Show("Se ha creado con éxito");
                     Limpiar();

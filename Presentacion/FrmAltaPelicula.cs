@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ABM_CINE_FINAL.Dominio;
-using ABM_CINE_FINAL.Servicios;
+using LibreriaCine.Factory;
+using LibreriaCine.Clases;
+
 
 namespace ABMCine.Formularios
 {

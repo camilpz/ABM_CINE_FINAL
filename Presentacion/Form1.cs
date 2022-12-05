@@ -7,29 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ABM_CINE_FINAL.Dominio;
-using ABM_CINE_FINAL.Datos;
 using ABM_CINE_FINAL.Presentacion;
 using System.Windows.Controls;
+using LibreriaCine.Clases;
+using ABM_CINE_FINAL.CliSingleton;
+using Newtonsoft.Json;
 
 namespace ABM_CINE_FINAL
 {
     public partial class FrmLogin : Form
     {
         Cliente cli;
+        public static FrmMenuOpcion2 menu2 = new FrmMenuOpcion2();
         public FrmLogin()
         {
             InitializeComponent();
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-			txtPassword.UseSystemPasswordChar = true;
-		}
+        //METODOS
         public bool VerificarCampos()
         {
-			// Necesito que me regresen los datos del cliente correcpondiente con los datos ingresados
-            // La alta comprobante de tendria que hacer con la id del cliente y no 
 			bool valido = true;
             if (txtDni.Text.Equals(string.Empty))
             {
@@ -45,7 +42,23 @@ namespace ABM_CINE_FINAL
             }
             return valido;
         }
-        
+
+        //METODOS API
+
+        public async Task<Cliente> Cargar_Cliente(Cliente c)
+        {
+            string datosJson = JsonConvert.SerializeObject(c);
+            string url = "";    //NECESITO QUE FUNCIONE EL WEB API PARA CONSEGUIR LAS URL
+            var data = await ClienteSingleton.Nuevo().PostAsync(url, datosJson);
+            
+            return JsonConvert.DeserializeObject<Cliente>(data);
+        }
+
+        //EVENTOS
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+			txtPassword.UseSystemPasswordChar = true;
+		}
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -69,13 +82,13 @@ namespace ABM_CINE_FINAL
             
             if (txtDni.Text.Equals("1234") && txtPassword.Text.Equals("1234"))
             {
-                FrmMenuOpcion2 menu2 = new FrmMenuOpcion2();
+                
                 menu2.Closed += (s, args) => this.Close();
                 this.Hide();
                 menu2.Show();
             }
         }
-
+        
 		private void cbxMostrarPass_CheckedChanged(object sender, EventArgs e)
 		{
             if (cbxMostrarPass.Checked)
@@ -94,5 +107,7 @@ namespace ABM_CINE_FINAL
 		{
             this.Dispose();
 		}
+
+
 	}
 }

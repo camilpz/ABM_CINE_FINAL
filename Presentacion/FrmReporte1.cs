@@ -1,5 +1,4 @@
-﻿using ABM_CINE_FINAL.Datos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibreriaCine.Clases;
 
 namespace ABM_CINE_FINAL.Presentacion
 {
@@ -20,7 +20,8 @@ namespace ABM_CINE_FINAL.Presentacion
 
         private void FrmReporte1_Load(object sender, EventArgs e)
         {
-            HelperDAO.ObtenerInstancia().ConsultaReporte("");
+            //HelperDAO.ObtenerInstancia().ConsultaReporte("");
+            //dgvReporte.DataSource
         }
     }
 }
