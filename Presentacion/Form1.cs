@@ -28,7 +28,8 @@ namespace ABM_CINE_FINAL
 		}
         public bool VerificarCampos()
         {
-			
+			// Necesito que me regresen los datos del cliente correcpondiente con los datos ingresados
+            // La alta comprobante de tendria que hacer con la id del cliente y no 
 			bool valido = true;
             if (txtDni.Text.Equals(string.Empty))
             {
@@ -64,14 +65,14 @@ namespace ABM_CINE_FINAL
             //        MessageBox.Show("Datos incorrectos");
             //    }
             //}
-            if(txtDni.Text.Equals("1234") && txtPassword.Text.Equals("1234"))
+            
+            
+            if (txtDni.Text.Equals("1234") && txtPassword.Text.Equals("1234"))
             {
-                //FrmMenu menu = new FrmMenu();
-                //menu.Show();
-                //this.Hide();
                 FrmMenuOpcion2 menu2 = new FrmMenuOpcion2();
-                menu2.Show();
+                menu2.Closed += (s, args) => this.Close();
                 this.Hide();
+                menu2.Show();
             }
         }
 

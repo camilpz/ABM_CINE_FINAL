@@ -114,8 +114,7 @@ namespace ABM_CINE_FINAL.Presentacion
 
 		private void btnSalir_Click(object sender, EventArgs e)
 		{
-			//CERRAR EL LOGIN????
-			
+			this.Close();
 		}
 
 		private void btnAcciones_Click(object sender, EventArgs e)

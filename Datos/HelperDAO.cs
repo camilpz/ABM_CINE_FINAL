@@ -31,7 +31,7 @@ namespace ABM_CINE_FINAL.Datos
             comando.CommandType = CommandType.StoredProcedure;
             comando.CommandText = NomSP;
         }
-        public bool Login(Cliente cliente)
+        public bool Login(Cliente cliente) //Modificar para que regrese los datos del cliente
         {
             bool resultado = false;
             Conectar("SP_Login");
@@ -454,6 +454,16 @@ namespace ABM_CINE_FINAL.Datos
 			comando.Parameters.Clear();
 			comando.Parameters.AddWithValue("@nombre", pelicula);
             comando.Parameters.AddWithValue("@eleccion", estado);           //1-inactiva 2-activa 3-todas
+            tabla.Load(comando.ExecuteReader());
+            cnn.Close();
+            return tabla;
+        }
+
+        public DataTable ConsultaReporte(string SP)
+        {
+            DataTable tabla = new DataTable();
+            Conectar(SP);
+            comando.Parameters.Clear();
             tabla.Load(comando.ExecuteReader());
             cnn.Close();
             return tabla;
